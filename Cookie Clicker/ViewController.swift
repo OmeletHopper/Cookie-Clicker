@@ -106,83 +106,12 @@ class UpgradeViewController: UITableViewController {
     }
     
     @objc func saveEverything() {
-        
-        var fileName = "CookieSave"
-        var DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        
-        var fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-        print("FilePath: \(fileURL.path)")
-        
-        //let writeString = "0"
-        do {
-            // Write to the file
-            try String(CookieVariable).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
-        } catch let error as NSError {
-            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-        }
-        
-        fileName = "CursorAmountSave"
-        DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        
-        fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-        print("FilePath: \(fileURL.path)")
-        
-        do {
-            // Write to the file
-            try String(CursorAmount).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
-        } catch let error as NSError {
-            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-        }
-        
-        
-        
-        fileName = "GrandmaAmountSave"
-        DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        
-        fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-        print("FilePath: \(fileURL.path)")
-        
-        do {
-            // Write to the file
-            try String(GrandmaAmount).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
-        } catch let error as NSError {
-            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-        }
-        
-        
-        fileName = "MineAmountSave"
-        DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        
-        fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-        print("FilePath: \(fileURL.path)")
-        
-        do {
-            // Write to the file
-            try String(MineAmount).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
-        } catch let error as NSError {
-            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-        }
-        
-        
-        fileName = "FactoryAmountSave"
-        DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        
-        fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-        print("FilePath: \(fileURL.path)")
-        
-        do {
-            // Write to the file
-            try String(FactoryAmount).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
-        } catch let error as NSError {
-            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-        }
-
+        storeData()
         
         initCursor()
         initGrandma()
         initMine()
         initFactory()
-        
     }
     
     @objc func autoClicks() {
