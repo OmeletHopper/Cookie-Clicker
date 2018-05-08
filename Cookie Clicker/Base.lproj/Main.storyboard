@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -15,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uom-ze-h6K">
-                                <rect key="frame" x="100" y="124" width="400" height="128"/>
+                                <rect key="frame" x="96" y="124" width="183" height="128"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                 <state key="normal" image="Cookie"/>
                                 <connections>
@@ -27,13 +30,13 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsa-Kh-URz">
-                                <rect key="frame" x="20" y="297" width="560" height="283"/>
+                                <rect key="frame" x="16" y="297" width="343" height="350"/>
                                 <connections>
                                     <segue destination="StG-ZF-Pff" kind="embed" id="xUD-qQ-BHv"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Jonny Archer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxO-1s-6nB">
-                                <rect key="frame" x="20" y="68" width="182.5" height="20"/>
+                                <rect key="frame" x="16" y="68" width="182.5" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="L1f-Vv-DbU"/>
                                 </constraints>
@@ -42,14 +45,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cookies: 0.0 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0R-he-irv" userLabel="CookieAmount">
-                                <rect key="frame" x="20" y="28" width="164" height="32"/>
+                                <rect key="frame" x="16" y="28" width="164" height="32"/>
                                 <accessibility key="accessibilityConfiguration" identifier="Label1"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4T-P3-dAH">
-                                <rect key="frame" x="479" y="124" width="21" height="21"/>
+                                <rect key="frame" x="258" y="124" width="21" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="21" id="sBj-iB-dCX"/>
                                 </constraints>
@@ -418,16 +421,16 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="CursorAmount" destination="WkJ-31-F8Y" id="zdl-rn-KbG"/>
+                        <outlet property="CursorAmountLabel" destination="WkJ-31-F8Y" id="fjW-Zc-FDK"/>
                         <outlet property="CursorBuy" destination="lJm-Li-ymq" id="iXg-TZ-fHQ"/>
                         <outlet property="CursorLabel" destination="PdJ-8R-cCx" id="yhv-wL-LnV"/>
-                        <outlet property="FactoryAmount" destination="LDT-NS-qEN" id="dpQ-L5-XtW"/>
+                        <outlet property="FactoryAmountLabel" destination="LDT-NS-qEN" id="gho-2Q-mFa"/>
                         <outlet property="FactoryBuy" destination="aFZ-bv-h6c" id="kPP-ed-vmv"/>
                         <outlet property="FactoryLabel" destination="1hZ-bt-32f" id="G8E-JD-ibw"/>
-                        <outlet property="GrandmaAmount" destination="G5m-bx-0DQ" id="DNU-OH-CB3"/>
+                        <outlet property="GrandmaAmountLabel" destination="G5m-bx-0DQ" id="1ae-dd-BjG"/>
                         <outlet property="GrandmaBuy" destination="HrM-gw-VTr" id="4LZ-G5-PU4"/>
                         <outlet property="GrandmaLabel" destination="otp-al-XZ3" id="Pad-CO-xsL"/>
-                        <outlet property="MineAmount" destination="KDy-6e-uJP" id="UBy-bW-V8N"/>
+                        <outlet property="MineAmountLabel" destination="KDy-6e-uJP" id="nxN-I6-4vh"/>
                         <outlet property="MineBuy" destination="D1L-Ra-I7B" id="293-yt-Yeg"/>
                         <outlet property="MineLabel" destination="FIe-Cp-TzS" id="8v3-CW-13F"/>
                     </connections>
