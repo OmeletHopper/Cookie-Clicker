@@ -67,6 +67,20 @@ func restoreData() {
     FactoryVariable = 2000 * pow(1.15, Double(FactoryAmount))
 
     print("Amount of cookies: \(CookieVariable)")
+    
+    /* Check if values are below what they should be. */
+    if CursorVariable <= 14 {
+        CursorVariable = 15
+    }
+    if GrandmaVariable <= 99 {
+        GrandmaVariable = 100
+    }
+    if MineVariable <= 499 {
+        MineVariable = 500
+    }
+    if FactoryVariable <= 1999 {
+        FactoryVariable = 2000
+    }
 }
 
 func storeData() {

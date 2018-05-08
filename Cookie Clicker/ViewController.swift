@@ -30,21 +30,6 @@ class ViewController: UIViewController {
         assignBackground()
                 
         NotificationCenter.default.addObserver(self, selector: #selector(updateCookie), name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
-        
-        if CursorVariable <= 14 {
-            CursorVariable = 15
-        }
-        if GrandmaVariable <= 99 {
-            GrandmaVariable = 100
-        }
-        if MineVariable <= 499 {
-            MineVariable = 500
-        }
-        if FactoryVariable <= 1999 {
-            FactoryVariable = 2000
-        }
-        
-        
     }
     
     
@@ -99,19 +84,19 @@ class UpgradeViewController: UITableViewController {
         _ = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(autoClicks), userInfo: nil, repeats: true)
         _ = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(saveEverything), userInfo: nil, repeats: true)
         
-        initCursor()
-        initGrandma()
-        initMine()
-        initFactory()
+        refreshCursor()
+        refreshGrandma()
+        refreshMine()
+        refreshFactory()
     }
     
     @objc func saveEverything() {
         storeData()
         
-        initCursor()
-        initGrandma()
-        initMine()
-        initFactory()
+        refreshCursor()
+        refreshGrandma()
+        refreshMine()
+        refreshFactory()
     }
     
     @objc func autoClicks() {
@@ -145,19 +130,19 @@ class UpgradeViewController: UITableViewController {
     @IBOutlet weak var FactoryLabel: UILabel!
     @IBOutlet weak var FactoryAmountLabel: UILabel!
     
-    func initCursor() {
+    func refreshCursor() {
         self.CursorLabel.text = String(format: "%.0f", CursorVariable)
         self.CursorAmountLabel.text = "\(CursorAmount)"
     }
-    func initGrandma() {
+    func refreshGrandma() {
         self.GrandmaLabel.text = String(format: "%.0f", GrandmaVariable)
         self.GrandmaAmountLabel.text = "\(GrandmaAmount)"
     }
-    func initMine() {
+    func refreshMine() {
         self.MineLabel.text = String(format: "%.0f", MineVariable)
         self.MineAmountLabel.text = "\(MineAmount)"
     }
-    func initFactory() {
+    func refreshFactory() {
         self.FactoryLabel.text = String(format: "%.0f", FactoryVariable)
         self.FactoryAmountLabel.text = "\(FactoryAmount)"
     }
