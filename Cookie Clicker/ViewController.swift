@@ -275,7 +275,7 @@ class UpgradeViewController: UITableViewController {
             MineAmount = MineAmount + 1
             MineVariable = MineVariable * 1.1
             self.MineLabel.text = String(format: "%.0f", MineVariable)
-            self.MineAmount.text = "\(MineAmount)"
+            self.MineAmountLabel.text = "\(MineAmount)"
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
         
@@ -292,7 +292,7 @@ class UpgradeViewController: UITableViewController {
             FactoryAmount = FactoryAmount + 1
             FactoryVariable = FactoryVariable * 1.1
             self.FactoryLabel.text = String(format: "%.0f", FactoryVariable)
-            self.FactoryAmount.text = "\(FactoryAmount)"
+            self.FactoryAmountLabel.text = "\(FactoryAmount)"
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
     
