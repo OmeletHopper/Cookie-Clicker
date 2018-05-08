@@ -61,12 +61,11 @@ class UpgradeViewController: UITableViewController {
         
         if CookieAmount >= Double(CursorVariable) {
             
-            CookieAmount = CookieAmount - Double(CursorVariable)
+            CookieAmount -= Double(CursorVariable)
             
-            CursorAmount = CursorAmount + 1
-            CursorVariable = CursorVariable * 1.1
-            self.CursorLabel.text = String(format: "%.0f", CursorVariable)
-            self.CursorAmountLabel.text = "\(CursorAmount)"
+            CursorAmount += 1
+            CursorVariable *= 1.1
+            refreshCursor()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
         
@@ -77,12 +76,11 @@ class UpgradeViewController: UITableViewController {
         
         if CookieAmount >= Double(GrandmaVariable) {
             
-            CookieAmount = CookieAmount - Double(GrandmaVariable)
+            CookieAmount -= Double(GrandmaVariable)
             
-            GrandmaAmount = GrandmaAmount + 1
-            GrandmaVariable = GrandmaVariable * 1.1
-            self.GrandmaLabel.text = String(format: "%.0f", GrandmaVariable)
-            self.GrandmaAmountLabel.text = "\(GrandmaAmount)"
+            GrandmaAmount += 1
+            GrandmaVariable *= 1.1
+            refreshGrandma()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
         
@@ -94,12 +92,11 @@ class UpgradeViewController: UITableViewController {
         
         if CookieAmount >= Double(MineVariable) {
             
-            CookieAmount = CookieAmount - Double(MineVariable)
+            CookieAmount -= Double(MineVariable)
             
-            MineAmount = MineAmount + 1
-            MineVariable = MineVariable * 1.1
-            self.MineLabel.text = String(format: "%.0f", MineVariable)
-            self.MineAmountLabel.text = "\(MineAmount)"
+            MineAmount += 1
+            MineVariable *= 1.1
+            refreshMine()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
         
@@ -111,12 +108,11 @@ class UpgradeViewController: UITableViewController {
         
         if CookieAmount >= Double(FactoryVariable) {
             
-            CookieAmount = CookieAmount - Double(FactoryVariable)
+            CookieAmount -= Double(FactoryVariable)
             
-            FactoryAmount = FactoryAmount + 1
-            FactoryVariable = FactoryVariable * 1.1
-            self.FactoryLabel.text = String(format: "%.0f", FactoryVariable)
-            self.FactoryAmountLabel.text = "\(FactoryAmount)"
+            FactoryAmount +=  1
+            FactoryVariable *=  1.1
+            refreshFactory()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
         
