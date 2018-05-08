@@ -8,6 +8,19 @@
 
 import Foundation
 
+var CookieAmount = 0.0
+
+var CursorVariable = 15.0
+var CursorAmount = 0
+
+var GrandmaVariable = 100.0
+var GrandmaAmount = 0
+
+var MineVariable = 500.0
+var MineAmount = 0
+
+var FactoryVariable = 2000.0
+var FactoryAmount = 0
 
 var fileName = "";
 let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -19,7 +32,7 @@ func restoreData() {
     fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
     print("FilePath: \(fileURL.path)")
     do {
-        CookieVariable = try Double(String(contentsOf: fileURL))!
+        CookieAmount = try Double(String(contentsOf: fileURL))!
     }
     catch let error as NSError {
         print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
@@ -66,7 +79,7 @@ func restoreData() {
     }
     FactoryVariable = 2000 * pow(1.15, Double(FactoryAmount))
 
-    print("Amount of cookies: \(CookieVariable)")
+    print("Amount of cookies: \(CookieAmount)")
     
     /* Check if values are below what they should be. */
     if CursorVariable <= 14 {
@@ -89,7 +102,7 @@ func storeData() {
     fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
     print("FilePath: \(fileURL.path)")
     do {
-        try String(CookieVariable).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+        try String(CookieAmount).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
     } catch let error as NSError {
         print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
     }

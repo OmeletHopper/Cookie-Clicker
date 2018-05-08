@@ -8,21 +8,6 @@
 
 import UIKit
 
-
-var CookieVariable = 0.0
-
-var CursorVariable = 15.0
-var CursorAmount = 0
-
-var GrandmaVariable = 100.0
-var GrandmaAmount = 0
-
-var MineVariable = 500.0
-var MineAmount = 0
-
-var FactoryVariable = 2000.0
-var FactoryAmount = 0
-
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -58,7 +43,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var plusOneLabel : UILabel!
     
     @objc func updateCookie(_ sender: UIButton?) {
-        self.CookieLabel.text = "Cookies: " + String(format: "%.1f", CookieVariable)
+        self.CookieLabel.text = "Cookies: " + String(format: "%.1f", CookieAmount)
     }
     
     @objc func HidePlusOne() {
@@ -67,9 +52,9 @@ class ViewController: UIViewController {
 
     
     @IBAction func AddCookie(_ sender: UIButton?) {
-        CookieVariable = CookieVariable + 1
+        CookieAmount = CookieAmount + 1
         plusOneLabel.isHidden = false
-        self.CookieLabel.text = "Cookies: " + String(format: "%.1f", CookieVariable)
+        self.CookieLabel.text = "Cookies: " + String(format: "%.1f", CookieAmount)
         _ = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(HidePlusOne), userInfo: nil, repeats: false)
         
     }
@@ -100,10 +85,10 @@ class UpgradeViewController: UITableViewController {
     }
     
     @objc func autoClicks() {
-        CookieVariable = Double(CursorAmount) / 1000 + CookieVariable // Cursors add .1/S, timer is every 0.01/S  /100
-        CookieVariable = Double(GrandmaAmount) / 100 + CookieVariable // Grandmas add 1/S timer is every 0.01/s /100
-        CookieVariable = Double(MineAmount) / 100 + CookieVariable // Mines add 3/S timer is every 0.01/s /100
-        CookieVariable = Double(FactoryAmount) / 100 + CookieVariable // Factories add 5/S timer is every 0.01/s /100
+        CookieAmount = Double(CursorAmount) / 1000 + CookieAmount // Cursors add .1/S, timer is every 0.01/S  /100
+        CookieAmount = Double(GrandmaAmount) / 100 + CookieAmount // Grandmas add 1/S timer is every 0.01/s /100
+        CookieAmount = Double(MineAmount) / 100 + CookieAmount // Mines add 3/S timer is every 0.01/s /100
+        CookieAmount = Double(FactoryAmount) / 100 + CookieAmount // Factories add 5/S timer is every 0.01/s /100
 
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
@@ -149,9 +134,9 @@ class UpgradeViewController: UITableViewController {
     
     @IBAction func AddCursor(_ sender: UIButton) {
         
-        if CookieVariable >= Double(CursorVariable) {
+        if CookieAmount >= Double(CursorVariable) {
             
-            CookieVariable = CookieVariable - Double(CursorVariable)
+            CookieAmount = CookieAmount - Double(CursorVariable)
             
             CursorAmount = CursorAmount + 1
             CursorVariable = CursorVariable * 1.1
@@ -165,9 +150,9 @@ class UpgradeViewController: UITableViewController {
     
     @IBAction func AddGrandma(_ sender: UIButton) {
         
-        if CookieVariable >= Double(GrandmaVariable) {
+        if CookieAmount >= Double(GrandmaVariable) {
             
-            CookieVariable = CookieVariable - Double(GrandmaVariable)
+            CookieAmount = CookieAmount - Double(GrandmaVariable)
             
             GrandmaAmount = GrandmaAmount + 1
             GrandmaVariable = GrandmaVariable * 1.1
@@ -182,9 +167,9 @@ class UpgradeViewController: UITableViewController {
     
     @IBAction func AddMine(_ sender: UIButton) {
         
-        if CookieVariable >= Double(MineVariable) {
+        if CookieAmount >= Double(MineVariable) {
             
-            CookieVariable = CookieVariable - Double(MineVariable)
+            CookieAmount = CookieAmount - Double(MineVariable)
             
             MineAmount = MineAmount + 1
             MineVariable = MineVariable * 1.1
@@ -199,9 +184,9 @@ class UpgradeViewController: UITableViewController {
     
     @IBAction func AddFactory(_ sender: UIButton) {
         
-        if CookieVariable >= Double(FactoryVariable) {
+        if CookieAmount >= Double(FactoryVariable) {
             
-            CookieVariable = CookieVariable - Double(FactoryVariable)
+            CookieAmount = CookieAmount - Double(FactoryVariable)
             
             FactoryAmount = FactoryAmount + 1
             FactoryVariable = FactoryVariable * 1.1
