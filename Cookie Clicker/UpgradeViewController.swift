@@ -68,9 +68,7 @@ class UpgradeViewController: UITableViewController {
             refreshCursor()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
-        
     }
-    
     
     @IBAction func AddGrandma(_ sender: UIButton) {
         
@@ -79,14 +77,11 @@ class UpgradeViewController: UITableViewController {
             CookieAmount -= Double(GrandmaVariable)
             
             GrandmaAmount += 1
-            GrandmaVariable *= 1.1
+            GrandmaVariable *= 1.15
             refreshGrandma()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
-        
     }
-    
-    
     
     @IBAction func AddMine(_ sender: UIButton) {
         
@@ -95,13 +90,10 @@ class UpgradeViewController: UITableViewController {
             CookieAmount -= Double(MineVariable)
             
             MineAmount += 1
-            MineVariable *= 1.1
+            MineVariable *= 1.15
             refreshMine()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
-        
-        
-        
     }
     
     @IBAction func AddFactory(_ sender: UIButton) {
@@ -111,12 +103,9 @@ class UpgradeViewController: UITableViewController {
             CookieAmount -= Double(FactoryVariable)
             
             FactoryAmount +=  1
-            FactoryVariable *=  1.1
+            FactoryVariable *=  1.15
             refreshFactory()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
-        
-        
-        
     }
 }
