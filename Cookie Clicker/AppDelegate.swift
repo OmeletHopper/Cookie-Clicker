@@ -3,7 +3,7 @@
 //  Cookie Clicker
 //
 //  Created by Jonathan Archer on 6/23/17.
-//  Copyright © 2017 Jack Archer Enterprises. All rights reserved.
+//  Copyright © 2017 Jonny Archer. All rights reserved.
 //
 
 import UIKit
@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+        restoreData();
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
