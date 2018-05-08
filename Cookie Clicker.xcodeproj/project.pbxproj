@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04FEC03A1EFD824F00F8A6AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */; };
+		04FEC03F1EFD824F00F8A6AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC03D1EFD824F00F8A6AA /* Main.storyboard */; };
+		04FEC0411EFD824F00F8A6AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0401EFD824F00F8A6AA /* Assets.xcassets */; };
+		04FEC0441EFD824F00F8A6AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0421EFD824F00F8A6AA /* LaunchScreen.storyboard */; };
+		04FEC04F1EFD87EC00F8A6AA /* cookiex2.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC04D1EFD87EC00F8A6AA /* cookiex2.png */; };
+		04FEC0501EFD87EC00F8A6AA /* cookie.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC04E1EFD87EC00F8A6AA /* cookie.png */; };
+		04FEC0521EFD93D000F8A6AA /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0511EFD93D000F8A6AA /* background.png */; };
+		04FEC0541EFE0E2C00F8A6AA /* cookie-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0531EFE0E2C00F8A6AA /* cookie-icon.png */; };
+		04FEC0561EFE0F2600F8A6AA /* gears-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0551EFE0F2600F8A6AA /* gears-icon.png */; };
+		04FEC0591EFF684900F8A6AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEC03B1EFD824F00F8A6AA /* ViewController.swift */; };
+		04FEC0691F001CDE00F8A6AA /* ipad-icon-x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0651F001CDE00F8A6AA /* ipad-icon-x2.png */; };
+		04FEC06A1F001CDE00F8A6AA /* ipad-icon-x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0661F001CDE00F8A6AA /* ipad-icon-x1.png */; };
+		04FEC06B1F001CDE00F8A6AA /* iphone-icon-x3.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0671F001CDE00F8A6AA /* iphone-icon-x3.png */; };
+		04FEC06C1F001CDE00F8A6AA /* iphone-icon-x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0681F001CDE00F8A6AA /* iphone-icon-x2.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04FEC0361EFD824F00F8A6AA /* Cookie Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cookie Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04FEC03B1EFD824F00F8A6AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04FEC03E1EFD824F00F8A6AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04FEC0401EFD824F00F8A6AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04FEC0431EFD824F00F8A6AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04FEC0451EFD824F00F8A6AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04FEC04D1EFD87EC00F8A6AA /* cookiex2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookiex2.png; sourceTree = "<group>"; };
+		04FEC04E1EFD87EC00F8A6AA /* cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookie.png; sourceTree = "<group>"; };
+		04FEC0511EFD93D000F8A6AA /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		04FEC0531EFE0E2C00F8A6AA /* cookie-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cookie-icon.png"; sourceTree = "<group>"; };
+		04FEC0551EFE0F2600F8A6AA /* gears-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gears-icon.png"; sourceTree = "<group>"; };
+		04FEC0651F001CDE00F8A6AA /* ipad-icon-x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-icon-x2.png"; sourceTree = "<group>"; };
+		04FEC0661F001CDE00F8A6AA /* ipad-icon-x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-icon-x1.png"; sourceTree = "<group>"; };
+		04FEC0671F001CDE00F8A6AA /* iphone-icon-x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-icon-x3.png"; sourceTree = "<group>"; };
+		04FEC0681F001CDE00F8A6AA /* iphone-icon-x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-icon-x2.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04FEC0331EFD824F00F8A6AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04FEC02D1EFD824F00F8A6AA = {
+			isa = PBXGroup;
+			children = (
+				04FEC0381EFD824F00F8A6AA /* Cookie Clicker */,
+				04FEC0371EFD824F00F8A6AA /* Products */,
+				04FEC05A1EFF6F6F00F8A6AA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04FEC0371EFD824F00F8A6AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04FEC0361EFD824F00F8A6AA /* Cookie Clicker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04FEC0381EFD824F00F8A6AA /* Cookie Clicker */ = {
+			isa = PBXGroup;
+			children = (
+				04FEC0651F001CDE00F8A6AA /* ipad-icon-x2.png */,
+				04FEC0661F001CDE00F8A6AA /* ipad-icon-x1.png */,
+				04FEC0671F001CDE00F8A6AA /* iphone-icon-x3.png */,
+				04FEC0681F001CDE00F8A6AA /* iphone-icon-x2.png */,
+				04FEC0551EFE0F2600F8A6AA /* gears-icon.png */,
+				04FEC0531EFE0E2C00F8A6AA /* cookie-icon.png */,
+				04FEC0511EFD93D000F8A6AA /* background.png */,
+				04FEC04D1EFD87EC00F8A6AA /* cookiex2.png */,
+				04FEC04E1EFD87EC00F8A6AA /* cookie.png */,
+				04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */,
+				04FEC03B1EFD824F00F8A6AA /* ViewController.swift */,
+				04FEC03D1EFD824F00F8A6AA /* Main.storyboard */,
+				04FEC0401EFD824F00F8A6AA /* Assets.xcassets */,
+				04FEC0421EFD824F00F8A6AA /* LaunchScreen.storyboard */,
+				04FEC0451EFD824F00F8A6AA /* Info.plist */,
+			);
+			path = "Cookie Clicker";
+			sourceTree = "<group>";
+		};
+		04FEC05A1EFF6F6F00F8A6AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04FEC0351EFD824F00F8A6AA /* Cookie Clicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04FEC0481EFD824F00F8A6AA /* Build configuration list for PBXNativeTarget "Cookie Clicker" */;
+			buildPhases = (
+				04FEC0321EFD824F00F8A6AA /* Sources */,
+				04FEC0331EFD824F00F8A6AA /* Frameworks */,
+				04FEC0341EFD824F00F8A6AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cookie Clicker";
+			productName = "Cookie Clicker";
+			productReference = 04FEC0361EFD824F00F8A6AA /* Cookie Clicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04FEC02E1EFD824F00F8A6AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Jack Archer Enterprises";
+				TargetAttributes = {
+					04FEC0351EFD824F00F8A6AA = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = MJPKG7BL3C;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 04FEC0311EFD824F00F8A6AA /* Build configuration list for PBXProject "Cookie Clicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04FEC02D1EFD824F00F8A6AA;
+			productRefGroup = 04FEC0371EFD824F00F8A6AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04FEC0351EFD824F00F8A6AA /* Cookie Clicker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04FEC0341EFD824F00F8A6AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FEC0441EFD824F00F8A6AA /* LaunchScreen.storyboard in Resources */,
+				04FEC0561EFE0F2600F8A6AA /* gears-icon.png in Resources */,
+				04FEC0521EFD93D000F8A6AA /* background.png in Resources */,
+				04FEC0411EFD824F00F8A6AA /* Assets.xcassets in Resources */,
+				04FEC0541EFE0E2C00F8A6AA /* cookie-icon.png in Resources */,
+				04FEC06C1F001CDE00F8A6AA /* iphone-icon-x2.png in Resources */,
+				04FEC03F1EFD824F00F8A6AA /* Main.storyboard in Resources */,
+				04FEC06B1F001CDE00F8A6AA /* iphone-icon-x3.png in Resources */,
+				04FEC0691F001CDE00F8A6AA /* ipad-icon-x2.png in Resources */,
+				04FEC06A1F001CDE00F8A6AA /* ipad-icon-x1.png in Resources */,
+				04FEC04F1EFD87EC00F8A6AA /* cookiex2.png in Resources */,
+				04FEC0501EFD87EC00F8A6AA /* cookie.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04FEC0321EFD824F00F8A6AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FEC0591EFF684900F8A6AA /* ViewController.swift in Sources */,
+				04FEC03A1EFD824F00F8A6AA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04FEC03D1EFD824F00F8A6AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04FEC03E1EFD824F00F8A6AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04FEC0421EFD824F00F8A6AA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04FEC0431EFD824F00F8A6AA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04FEC0461EFD824F00F8A6AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04FEC0471EFD824F00F8A6AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04FEC0491EFD824F00F8A6AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MJPKG7BL3C;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Cookie Clicker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JonnyArcher.Cookie-Clicker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		04FEC04A1EFD824F00F8A6AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MJPKG7BL3C;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Cookie Clicker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JonnyArcher.Cookie-Clicker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04FEC0311EFD824F00F8A6AA /* Build configuration list for PBXProject "Cookie Clicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04FEC0461EFD824F00F8A6AA /* Debug */,
+				04FEC0471EFD824F00F8A6AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04FEC0481EFD824F00F8A6AA /* Build configuration list for PBXNativeTarget "Cookie Clicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04FEC0491EFD824F00F8A6AA /* Debug */,
+				04FEC04A1EFD824F00F8A6AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04FEC02E1EFD824F00F8A6AA /* Project object */;
+}
