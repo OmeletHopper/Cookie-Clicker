@@ -57,9 +57,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045E821320A1440100C71914 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				04FEC0651F001CDE00F8A6AA /* ipad-icon-x2.png */,
+				04FEC0661F001CDE00F8A6AA /* ipad-icon-x1.png */,
+				04FEC0671F001CDE00F8A6AA /* iphone-icon-x3.png */,
+				04FEC0681F001CDE00F8A6AA /* iphone-icon-x2.png */,
+				04FEC0551EFE0F2600F8A6AA /* gears-icon.png */,
+				04FEC0531EFE0E2C00F8A6AA /* cookie-icon.png */,
+				04FEC0511EFD93D000F8A6AA /* background.png */,
+				04FEC04D1EFD87EC00F8A6AA /* cookiex2.png */,
+				04FEC04E1EFD87EC00F8A6AA /* cookie.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		04FEC02D1EFD824F00F8A6AA = {
 			isa = PBXGroup;
 			children = (
+				045E821320A1440100C71914 /* Images */,
 				045E821120A13CEF00C71914 /* .gitignore */,
 				04FEC0381EFD824F00F8A6AA /* Cookie Clicker */,
 				04FEC0371EFD824F00F8A6AA /* Products */,
@@ -78,15 +95,6 @@
 		04FEC0381EFD824F00F8A6AA /* Cookie Clicker */ = {
 			isa = PBXGroup;
 			children = (
-				04FEC0651F001CDE00F8A6AA /* ipad-icon-x2.png */,
-				04FEC0661F001CDE00F8A6AA /* ipad-icon-x1.png */,
-				04FEC0671F001CDE00F8A6AA /* iphone-icon-x3.png */,
-				04FEC0681F001CDE00F8A6AA /* iphone-icon-x2.png */,
-				04FEC0551EFE0F2600F8A6AA /* gears-icon.png */,
-				04FEC0531EFE0E2C00F8A6AA /* cookie-icon.png */,
-				04FEC0511EFD93D000F8A6AA /* background.png */,
-				04FEC04D1EFD87EC00F8A6AA /* cookiex2.png */,
-				04FEC04E1EFD87EC00F8A6AA /* cookie.png */,
 				04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */,
 				04FEC03B1EFD824F00F8A6AA /* ViewController.swift */,
 				04FEC03D1EFD824F00F8A6AA /* Main.storyboard */,
