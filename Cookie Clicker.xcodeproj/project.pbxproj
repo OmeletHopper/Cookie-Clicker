@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0446F3C420A12CC800B9618C /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0446F3C320A12CC800B9618C /* Saving.swift */; };
-		045E821220A13CEF00C71914 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 045E821120A13CEF00C71914 /* .gitignore */; };
 		04FEC03A1EFD824F00F8A6AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */; };
 		04FEC03F1EFD824F00F8A6AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC03D1EFD824F00F8A6AA /* Main.storyboard */; };
 		04FEC0411EFD824F00F8A6AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0401EFD824F00F8A6AA /* Assets.xcassets */; };
@@ -27,7 +26,6 @@
 
 /* Begin PBXFileReference section */
 		0446F3C320A12CC800B9618C /* Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
-		045E821120A13CEF00C71914 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		04FEC0361EFD824F00F8A6AA /* Cookie Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cookie Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FEC03B1EFD824F00F8A6AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 				04FEC0451EFD824F00F8A6AA /* Info.plist */,
 				04FEC0401EFD824F00F8A6AA /* Assets.xcassets */,
 				045E821320A1440100C71914 /* Images */,
-				045E821120A13CEF00C71914 /* .gitignore */,
 				04FEC0381EFD824F00F8A6AA /* Cookie Clicker */,
 				04FEC0371EFD824F00F8A6AA /* Products */,
 				04FEC05A1EFF6F6F00F8A6AA /* Frameworks */,
@@ -193,7 +190,6 @@
 				04FEC0691F001CDE00F8A6AA /* ipad-icon-x2.png in Resources */,
 				04FEC06A1F001CDE00F8A6AA /* ipad-icon-x1.png in Resources */,
 				04FEC04F1EFD87EC00F8A6AA /* cookiex2.png in Resources */,
-				045E821220A13CEF00C71914 /* .gitignore in Resources */,
 				04FEC0501EFD87EC00F8A6AA /* cookie.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
