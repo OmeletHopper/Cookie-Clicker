@@ -12,32 +12,11 @@ class UpgradeViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(autoClicks), userInfo: nil, repeats: true)
-        _ = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(saveEverything), userInfo: nil, repeats: true)
-        
+                
         refreshCursor()
         refreshGrandma()
         refreshMine()
         refreshFactory()
-    }
-    
-    @objc func saveEverything() {
-        storeData()
-        
-        refreshCursor()
-        refreshGrandma()
-        refreshMine()
-        refreshFactory()
-    }
-    
-    @objc func autoClicks() {
-        CookieAmount = Double(CursorAmount) / 1000 + CookieAmount // Cursors add .1/S, timer is every 0.01/S  /100
-        CookieAmount = Double(GrandmaAmount) / 100 + CookieAmount // Grandmas add 1/S timer is every 0.01/s /100
-        CookieAmount = Double(MineAmount) / 100 + CookieAmount // Mines add 3/S timer is every 0.01/s /100
-        CookieAmount = Double(FactoryAmount) / 100 + CookieAmount // Factories add 5/S timer is every 0.01/s /100
-        
-        
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
     }
     
     override func didReceiveMemoryWarning() {
