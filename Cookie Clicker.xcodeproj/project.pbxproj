@@ -73,9 +73,20 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		045E821420A1444B00C71914 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				04FEC03D1EFD824F00F8A6AA /* Main.storyboard */,
+				04FEC0421EFD824F00F8A6AA /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		04FEC02D1EFD824F00F8A6AA = {
 			isa = PBXGroup;
 			children = (
+				04FEC0451EFD824F00F8A6AA /* Info.plist */,
+				04FEC0401EFD824F00F8A6AA /* Assets.xcassets */,
 				045E821320A1440100C71914 /* Images */,
 				045E821120A13CEF00C71914 /* .gitignore */,
 				04FEC0381EFD824F00F8A6AA /* Cookie Clicker */,
@@ -95,12 +106,9 @@
 		04FEC0381EFD824F00F8A6AA /* Cookie Clicker */ = {
 			isa = PBXGroup;
 			children = (
+				045E821420A1444B00C71914 /* Storyboards */,
 				04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */,
 				04FEC03B1EFD824F00F8A6AA /* ViewController.swift */,
-				04FEC03D1EFD824F00F8A6AA /* Main.storyboard */,
-				04FEC0401EFD824F00F8A6AA /* Assets.xcassets */,
-				04FEC0421EFD824F00F8A6AA /* LaunchScreen.storyboard */,
-				04FEC0451EFD824F00F8A6AA /* Info.plist */,
 				0446F3C320A12CC800B9618C /* Saving.swift */,
 			);
 			path = "Cookie Clicker";
@@ -347,7 +355,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = MJPKG7BL3C;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "Cookie Clicker/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
@@ -367,7 +375,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = MJPKG7BL3C;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "Cookie Clicker/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
