@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0446F3C420A12CC800B9618C /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0446F3C320A12CC800B9618C /* Saving.swift */; };
 		04FEC03A1EFD824F00F8A6AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */; };
 		04FEC03F1EFD824F00F8A6AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC03D1EFD824F00F8A6AA /* Main.storyboard */; };
 		04FEC0411EFD824F00F8A6AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0401EFD824F00F8A6AA /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0446F3C320A12CC800B9618C /* Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
 		04FEC0361EFD824F00F8A6AA /* Cookie Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cookie Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FEC03B1EFD824F00F8A6AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				04FEC0401EFD824F00F8A6AA /* Assets.xcassets */,
 				04FEC0421EFD824F00F8A6AA /* LaunchScreen.storyboard */,
 				04FEC0451EFD824F00F8A6AA /* Info.plist */,
+				0446F3C320A12CC800B9618C /* Saving.swift */,
 			);
 			path = "Cookie Clicker";
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0446F3C420A12CC800B9618C /* Saving.swift in Sources */,
 				04FEC0591EFF684900F8A6AA /* ViewController.swift in Sources */,
 				04FEC03A1EFD824F00F8A6AA /* AppDelegate.swift in Sources */,
 			);
