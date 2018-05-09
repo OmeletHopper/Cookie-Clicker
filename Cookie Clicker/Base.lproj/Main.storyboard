@@ -291,7 +291,6 @@
                                                     <state key="normal" title="Buy"/>
                                                     <connections>
                                                         <action selector="AddFactory:" destination="StG-ZF-Pff" eventType="touchUpInside" id="bVd-EI-QLs"/>
-                                                        <action selector="AddMine:" destination="StG-ZF-Pff" eventType="touchUpInside" id="3TU-Fj-Asg"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMNT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDT-NS-qEN">
@@ -405,9 +404,9 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fsa-eb-61a" firstAttribute="trailing" secondItem="KPS-zU-Zfc" secondAttribute="trailingMargin" id="KyF-4q-qnH"/>
-                                                <constraint firstItem="fsa-eb-61a" firstAttribute="top" secondItem="KPS-zU-Zfc" secondAttribute="topMargin" id="YTy-oz-lXW"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="fsa-eb-61a" secondAttribute="bottom" constant="1" id="mBK-kE-FMf"/>
+                                                <constraint firstItem="fsa-eb-61a" firstAttribute="trailing" secondItem="KPS-zU-Zfc" secondAttribute="trailingMargin" id="OVa-4F-f2R"/>
+                                                <constraint firstItem="fsa-eb-61a" firstAttribute="top" secondItem="KPS-zU-Zfc" secondAttribute="topMargin" id="Ovx-Qg-pBG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fsa-eb-61a" secondAttribute="bottom" constant="1" id="f6c-3U-udf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -457,7 +456,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jonathan Archer II" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2X2-vE-q1a">
-                                                    <rect key="frame" x="16" y="31" width="140" height="1"/>
+                                                    <rect key="frame" x="16" y="11" width="140" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -478,7 +477,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caleb Walters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oa4-4x-OCR">
-                                                    <rect key="frame" x="253" y="31" width="106" height="1"/>
+                                                    <rect key="frame" x="253" y="11" width="106" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
