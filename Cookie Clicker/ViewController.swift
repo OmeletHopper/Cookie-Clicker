@@ -9,17 +9,20 @@
 import UIKit
 import QuartzCore
 
+var CookiesToAdd = 0.0;
+
 /*
  This function gets called by our scheduledTimer() every .01 of a second.
  This means that everything gets divided by 100.
 */
 func autoClicks() {
-    CookieAmount += Double(CursorAmount) * 0.001    // Cursors add .1/S.
-    CookieAmount += Double(GrandmaAmount) * 0.01    // Grandmas add 1/S.
-    CookieAmount += Double(MineAmount) * 0.03       // Mines add 3/S.
-    CookieAmount += Double(FactoryAmount) * 0.05    // Factories add 5/S.
+    CookiesToAdd = Double(CursorAmount) * 0.001    // Cursors add .1/S.
+    CookiesToAdd += Double(GrandmaAmount) * 0.01    // Grandmas add 1/S.
+    CookiesToAdd += Double(MineAmount) * 0.03       // Mines add 3/S.
+    CookiesToAdd += Double(FactoryAmount) * 0.05    // Factories add 5/S.
+    CookieAmount += CookiesToAdd
     
-    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateCookieLabel"), object: nil)
 }
 
 class ViewController: UIViewController {
@@ -29,7 +32,7 @@ class ViewController: UIViewController {
         assignBackground()
         _ = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(auto), userInfo: nil, repeats: true)
         _ = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(save), userInfo: nil, repeats: true)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateCookie), name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateCookie), name: NSNotification.Name(rawValue: "updateCookieLabel"), object: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,10 +60,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var CookieClicked: UIButton!
     @IBOutlet weak var CookieLabel: UILabel!
+    @IBOutlet weak var CookiesPerSecondLabel: UILabel!
     @IBOutlet weak var plusOneLabel: UILabel!
     
     @objc func updateCookie(_ sender: UIButton?) {
         self.CookieLabel.text = String(format: "%.1f", CookieAmount)
+        self.CookiesPerSecondLabel.text = String(format: "%.1f", (CookiesToAdd * 100))
     }
     
     @objc func HidePlusOne() {
