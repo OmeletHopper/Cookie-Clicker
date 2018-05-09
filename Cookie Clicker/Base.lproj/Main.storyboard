@@ -21,6 +21,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Jonny Archer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxO-1s-6nB">
+                                <rect key="frame" x="16" y="62" width="183" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0R-he-irv" userLabel="CookieAmount">
+                                <rect key="frame" x="16" y="20" width="49" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Label1"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cookies" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPv-Em-0gW" userLabel="CookieAmount">
+                                <rect key="frame" x="255" y="20" width="105" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Label1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="2TU-gE-20L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4T-P3-dAH">
+                                <rect key="frame" x="294" y="176" width="21" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="21" id="LeV-S4-juz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uom-ze-h6K">
                                 <rect key="frame" x="59" y="205" width="256" height="256"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -33,48 +65,19 @@
                                     <action selector="AddCookie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahc-SH-wlA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Jonny Archer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxO-1s-6nB">
-                                <rect key="frame" x="16" y="62" width="183" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0R-he-irv" userLabel="CookieAmount">
-                                <rect key="frame" x="310" y="20" width="49" height="34"/>
-                                <accessibility key="accessibilityConfiguration" identifier="Label1"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cookies:  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPv-Em-0gW" userLabel="CookieAmount">
-                                <rect key="frame" x="16" y="20" width="121" height="34"/>
-                                <accessibility key="accessibilityConfiguration" identifier="Label1"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4T-P3-dAH">
-                                <rect key="frame" x="294" y="176" width="21" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="21" id="8je-Nl-wjQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Uom-ze-h6K" firstAttribute="top" secondItem="C4T-P3-dAH" secondAttribute="bottom" constant="8" symbolic="YES" id="2PD-eF-JSS"/>
-                            <constraint firstItem="sxO-1s-6nB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="62" id="6RH-7s-Klz"/>
-                            <constraint firstItem="Uom-ze-h6K" firstAttribute="trailing" secondItem="C4T-P3-dAH" secondAttribute="trailing" id="DbC-Jb-3g9"/>
-                            <constraint firstItem="Uom-ze-h6K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LWl-4O-N1G"/>
-                            <constraint firstItem="zPv-Em-0gW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Lgp-tI-ZLH"/>
-                            <constraint firstItem="sxO-1s-6nB" firstAttribute="top" secondItem="zPv-Em-0gW" secondAttribute="bottom" constant="8" symbolic="YES" id="NDh-e2-Khs"/>
-                            <constraint firstItem="h0R-he-irv" firstAttribute="baseline" secondItem="zPv-Em-0gW" secondAttribute="baseline" id="NeD-ZD-1fD"/>
-                            <constraint firstItem="Uom-ze-h6K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RAH-IC-Ma8"/>
-                            <constraint firstItem="zPv-Em-0gW" firstAttribute="leading" secondItem="sxO-1s-6nB" secondAttribute="leading" id="nP8-4U-Wib"/>
-                            <constraint firstItem="h0R-he-irv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="niS-kn-OnZ"/>
+                            <constraint firstItem="zPv-Em-0gW" firstAttribute="baseline" secondItem="h0R-he-irv" secondAttribute="baseline" id="6rG-9U-Ic3"/>
+                            <constraint firstItem="sxO-1s-6nB" firstAttribute="leading" secondItem="h0R-he-irv" secondAttribute="leading" id="6ym-f4-vv7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zPv-Em-0gW" secondAttribute="trailing" constant="-1" id="9de-Cq-cMa"/>
+                            <constraint firstItem="h0R-he-irv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FXa-d6-49X"/>
+                            <constraint firstItem="Uom-ze-h6K" firstAttribute="trailing" secondItem="C4T-P3-dAH" secondAttribute="trailing" id="Fv8-CQ-J9x"/>
+                            <constraint firstItem="sxO-1s-6nB" firstAttribute="top" secondItem="h0R-he-irv" secondAttribute="bottom" constant="8" symbolic="YES" id="InT-vf-njl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C4T-P3-dAH" secondAttribute="trailing" constant="44" id="LkP-3W-0iU"/>
+                            <constraint firstItem="h0R-he-irv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jvR-3c-xDs"/>
+                            <constraint firstItem="Uom-ze-h6K" firstAttribute="top" secondItem="C4T-P3-dAH" secondAttribute="bottom" constant="8" symbolic="YES" id="n1Z-w3-SM6"/>
+                            <constraint firstItem="Uom-ze-h6K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ySM-76-Q2n"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cookie" image="cookie-icon.png" selectedImage="cookie-icon.png" id="gDE-cy-vJR"/>
@@ -86,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3286" y="-259"/>
+            <point key="canvasLocation" x="3285.5999999999999" y="-259.52023988005999"/>
         </scene>
         <!--Upgrade-->
         <scene sceneID="3We-uj-CtJ">
@@ -311,15 +314,15 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="LDT-NS-qEN" firstAttribute="centerY" secondItem="RwA-PQ-fzT" secondAttribute="centerY" id="7KU-py-b1a"/>
-                                                <constraint firstItem="aFZ-bv-h6c" firstAttribute="leading" secondItem="1hZ-bt-32f" secondAttribute="trailing" constant="8" symbolic="YES" id="91E-zi-nOJ"/>
+                                                <constraint firstItem="aFZ-bv-h6c" firstAttribute="leading" secondItem="1hZ-bt-32f" secondAttribute="trailing" constant="8" symbolic="YES" id="LC9-Q4-2DV"/>
                                                 <constraint firstItem="LDT-NS-qEN" firstAttribute="baseline" secondItem="aFZ-bv-h6c" secondAttribute="baseline" id="NJU-Vg-xMr"/>
+                                                <constraint firstItem="1hZ-bt-32f" firstAttribute="baseline" secondItem="2FV-8q-BS1" secondAttribute="baseline" id="S9i-ns-tL1"/>
                                                 <constraint firstItem="LDT-NS-qEN" firstAttribute="leading" secondItem="Zao-iJ-KdA" secondAttribute="trailing" constant="8" symbolic="YES" id="bKw-j6-th7"/>
                                                 <constraint firstItem="LDT-NS-qEN" firstAttribute="centerX" secondItem="RwA-PQ-fzT" secondAttribute="centerX" id="hA5-NF-3fE"/>
                                                 <constraint firstItem="Zao-iJ-KdA" firstAttribute="baseline" secondItem="LDT-NS-qEN" secondAttribute="baseline" id="kaZ-x0-6xT"/>
+                                                <constraint firstItem="1hZ-bt-32f" firstAttribute="centerY" secondItem="aFZ-bv-h6c" secondAttribute="centerY" id="o1h-rm-DJL"/>
                                                 <constraint firstItem="aFZ-bv-h6c" firstAttribute="trailing" secondItem="RwA-PQ-fzT" secondAttribute="trailingMargin" id="rXg-ib-VyF"/>
-                                                <constraint firstItem="2FV-8q-BS1" firstAttribute="baseline" secondItem="1hZ-bt-32f" secondAttribute="baseline" id="rnE-WR-Ma7"/>
                                                 <constraint firstItem="2FV-8q-BS1" firstAttribute="leading" secondItem="RwA-PQ-fzT" secondAttribute="leadingMargin" id="xxp-yC-Y31"/>
-                                                <constraint firstItem="1hZ-bt-32f" firstAttribute="centerY" secondItem="aFZ-bv-h6c" secondAttribute="centerY" id="ztD-Kp-leg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
