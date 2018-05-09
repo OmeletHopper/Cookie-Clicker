@@ -552,7 +552,7 @@
                             <outlet property="delegate" destination="QpO-gB-fRb" id="7yg-hc-Tuk"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Other" selectedImage="cookie-icon.png" id="x7f-Qu-DD1"/>
+                    <tabBarItem key="tabBarItem" title="Other" image="cookie-icon.png" selectedImage="cookie-icon.png" id="x7f-Qu-DD1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dS1-bk-aw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -601,8 +601,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zGE-iU-uFF"/>
                         <segue destination="So9-VF-l0B" kind="relationship" relationship="viewControllers" id="3ro-AX-DFa"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zGE-iU-uFF"/>
                         <segue destination="QpO-gB-fRb" kind="relationship" relationship="viewControllers" id="VLu-SE-TMX"/>
                     </connections>
                 </tabBarController>
