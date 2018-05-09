@@ -10,6 +10,7 @@
 		04079D7D20A2658F007CED2B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04079D7C20A2658F007CED2B /* QuartzCore.framework */; };
 		0446F3C420A12CC800B9618C /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0446F3C320A12CC800B9618C /* Saving.swift */; };
 		045E821620A14A2D00C71914 /* UpgradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E821520A14A2D00C71914 /* UpgradeViewController.swift */; };
+		046B650D20A2922200D5B73B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B650C20A2922200D5B73B /* TabBarController.swift */; };
 		04FEC03A1EFD824F00F8A6AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */; };
 		04FEC03F1EFD824F00F8A6AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC03D1EFD824F00F8A6AA /* Main.storyboard */; };
 		04FEC0411EFD824F00F8A6AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0401EFD824F00F8A6AA /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		04079D7C20A2658F007CED2B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0446F3C320A12CC800B9618C /* Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
 		045E821520A14A2D00C71914 /* UpgradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeViewController.swift; sourceTree = "<group>"; };
+		046B650C20A2922200D5B73B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		04FEC0361EFD824F00F8A6AA /* Cookie Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cookie Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FEC03B1EFD824F00F8A6AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				04FEC03B1EFD824F00F8A6AA /* ViewController.swift */,
 				045E821520A14A2D00C71914 /* UpgradeViewController.swift */,
 				0446F3C320A12CC800B9618C /* Saving.swift */,
+				046B650C20A2922200D5B73B /* TabBarController.swift */,
 			);
 			path = "Cookie Clicker";
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				0446F3C420A12CC800B9618C /* Saving.swift in Sources */,
 				045E821620A14A2D00C71914 /* UpgradeViewController.swift in Sources */,
 				04FEC0591EFF684900F8A6AA /* ViewController.swift in Sources */,
+				046B650D20A2922200D5B73B /* TabBarController.swift in Sources */,
 				04FEC03A1EFD824F00F8A6AA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

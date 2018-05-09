@@ -594,12 +594,17 @@
         <!--Tab Bar Controller-->
         <scene sceneID="bbr-WZ-PPT">
             <objects>
-                <tabBarController id="4X9-Kt-vZ7" sceneMemberID="viewController">
+                <tabBarController id="4X9-Kt-vZ7" customClass="TabBarController" customModule="Cookie_Clicker" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="unL-4M-gsv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultIndex">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="So9-VF-l0B" kind="relationship" relationship="viewControllers" id="3ro-AX-DFa"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zGE-iU-uFF"/>
