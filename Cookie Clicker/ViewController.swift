@@ -9,11 +9,15 @@
 import UIKit
 import QuartzCore
 
+/*
+ This function gets called by our scheduledTimer() every .01 of a second.
+ This means that everything gets divided by 100.
+*/
 func autoClicks() {
-    CookieAmount = Double(CursorAmount) / 1000 + CookieAmount // Cursors add .1/S, timer is every 0.01/S  /100
-    CookieAmount = Double(GrandmaAmount) / 100 + CookieAmount // Grandmas add 1/S timer is every 0.01/s /100
-    CookieAmount = Double(MineAmount) / 100 + CookieAmount // Mines add 3/S timer is every 0.01/s /100
-    CookieAmount = Double(FactoryAmount) / 100 + CookieAmount // Factories add 5/S timer is every 0.01/s /100
+    CookieAmount += Double(CursorAmount) * 0.001    // Cursors add .1/S.
+    CookieAmount += Double(GrandmaAmount) * 0.01    // Grandmas add 1/S.
+    CookieAmount += Double(MineAmount) * 0.03       // Mines add 3/S.
+    CookieAmount += Double(FactoryAmount) * 0.05    // Factories add 5/S.
     
     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
 }
@@ -26,7 +30,6 @@ class ViewController: UIViewController {
         _ = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(auto), userInfo: nil, repeats: true)
         _ = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(save), userInfo: nil, repeats: true)
         NotificationCenter.default.addObserver(self, selector: #selector(updateCookie), name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,13 +66,10 @@ class ViewController: UIViewController {
     @objc func HidePlusOne() {
         plusOneLabel.isHidden = true
     }
-
     
     @IBAction func AddCookie(_ sender: UIButton?) {
         CookieAmount = CookieAmount + 1
         plusOneLabel.isHidden = false
         _ = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(HidePlusOne), userInfo: nil, repeats: false)
-        
     }
-    
 }
