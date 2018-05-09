@@ -64,7 +64,7 @@ class UpgradeViewController: UITableViewController {
             CookieAmount -= Double(CursorVariable)
             
             CursorAmount += 1
-            CursorVariable *= 1.1
+            CursorVariable = 15 * pow(1.15, Double(CursorAmount))
             refreshCursor()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
@@ -77,7 +77,7 @@ class UpgradeViewController: UITableViewController {
             CookieAmount -= Double(GrandmaVariable)
             
             GrandmaAmount += 1
-            GrandmaVariable *= 1.15
+            GrandmaVariable = 100 * pow(1.15, Double(GrandmaAmount))
             refreshGrandma()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
@@ -90,7 +90,7 @@ class UpgradeViewController: UITableViewController {
             CookieAmount -= Double(MineVariable)
             
             MineAmount += 1
-            MineVariable *= 1.15
+            MineVariable = 500 * pow(1.15, Double(MineAmount))
             refreshMine()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
@@ -103,7 +103,7 @@ class UpgradeViewController: UITableViewController {
             CookieAmount -= Double(FactoryVariable)
             
             FactoryAmount +=  1
-            FactoryVariable *=  1.15
+            FactoryVariable = 2000 * pow(1.15, Double(FactoryAmount))
             refreshFactory()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
