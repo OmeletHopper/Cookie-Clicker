@@ -32,6 +32,7 @@
 		0446F3C320A12CC800B9618C /* Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
 		045E821520A14A2D00C71914 /* UpgradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeViewController.swift; sourceTree = "<group>"; };
 		046B650C20A2922200D5B73B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		04FD507020A655320058094A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		04FEC0361EFD824F00F8A6AA /* Cookie Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cookie Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FEC03B1EFD824F00F8A6AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		04FEC02D1EFD824F00F8A6AA = {
 			isa = PBXGroup;
 			children = (
+				04FD507020A655320058094A /* README.md */,
 				04FEC0451EFD824F00F8A6AA /* Info.plist */,
 				04FEC0401EFD824F00F8A6AA /* Assets.xcassets */,
 				045E821320A1440100C71914 /* Images */,
