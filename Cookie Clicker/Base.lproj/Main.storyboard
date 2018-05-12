@@ -52,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4T-P3-dAH">
-                                <rect key="frame" x="294" y="177" width="21" height="21"/>
+                                <rect key="frame" x="230" y="241" width="21" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="21" id="3gG-Qb-dxT"/>
                                 </constraints>
@@ -67,7 +67,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uom-ze-h6K">
-                                <rect key="frame" x="59" y="206" width="256" height="256"/>
+                                <rect key="frame" x="123" y="270" width="128" height="128"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
@@ -76,7 +76,7 @@
                                     <constraint firstAttribute="width" secondItem="Uom-ze-h6K" secondAttribute="height" multiplier="1:1" id="6Jf-m0-up2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                <state key="normal" image="cookiex2.png"/>
+                                <state key="normal" image="Cookie"/>
                                 <connections>
                                     <action selector="AddCookie:" destination="BYZ-38-t0r" eventType="touchDown" id="2Jf-qc-0Sn"/>
                                     <action selector="HidePlusOne" destination="BYZ-38-t0r" eventType="touchUpOutside" id="1Se-tH-REm"/>
@@ -735,7 +735,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Cookie" width="128" height="128"/>
         <image name="cookie-icon.png" width="20" height="20"/>
-        <image name="cookiex2.png" width="256" height="256"/>
     </resources>
 </document>

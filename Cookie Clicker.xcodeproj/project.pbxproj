@@ -12,6 +12,8 @@
 		0446F3C420A12CC800B9618C /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0446F3C320A12CC800B9618C /* Saving.swift */; };
 		045E821620A14A2D00C71914 /* AutoClickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E821520A14A2D00C71914 /* AutoClickerController.swift */; };
 		046B650D20A2922200D5B73B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B650C20A2922200D5B73B /* TabBarController.swift */; };
+		0486BF8020A74709004EAC78 /* cookie-appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486BF7F20A74709004EAC78 /* cookie-appstore.png */; };
+		0486BF8220A74991004EAC78 /* ipad-pro-icon-x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486BF8120A74991004EAC78 /* ipad-pro-icon-x1.png */; };
 		04A45AA120A672E600438B9C /* AutoClickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A45AA020A672E600438B9C /* AutoClickerViewController.swift */; };
 		04A45AA320A67B7A00438B9C /* screenshot_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A45AA220A67B7900438B9C /* screenshot_1.png */; };
 		04FEC03A1EFD824F00F8A6AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */; };
@@ -35,6 +37,8 @@
 		0446F3C320A12CC800B9618C /* Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
 		045E821520A14A2D00C71914 /* AutoClickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoClickerController.swift; sourceTree = "<group>"; };
 		046B650C20A2922200D5B73B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		0486BF7F20A74709004EAC78 /* cookie-appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cookie-appstore.png"; sourceTree = "<group>"; };
+		0486BF8120A74991004EAC78 /* ipad-pro-icon-x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-pro-icon-x1.png"; sourceTree = "<group>"; };
 		04A45AA020A672E600438B9C /* AutoClickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoClickerViewController.swift; sourceTree = "<group>"; };
 		04A45AA220A67B7900438B9C /* screenshot_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screenshot_1.png; path = Screenshots/screenshot_1.png; sourceTree = SOURCE_ROOT; };
 		04FD507020A655320058094A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 		045E821320A1440100C71914 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0486BF8120A74991004EAC78 /* ipad-pro-icon-x1.png */,
+				0486BF7F20A74709004EAC78 /* cookie-appstore.png */,
 				04A45AA220A67B7900438B9C /* screenshot_1.png */,
 				04FEC0651F001CDE00F8A6AA /* ipad-icon-x2.png */,
 				04FEC0661F001CDE00F8A6AA /* ipad-icon-x1.png */,
@@ -202,6 +208,7 @@
 				04FEC0411EFD824F00F8A6AA /* Assets.xcassets in Resources */,
 				04FEC0541EFE0E2C00F8A6AA /* cookie-icon.png in Resources */,
 				04FEC06C1F001CDE00F8A6AA /* iphone-icon-x2.png in Resources */,
+				0486BF8020A74709004EAC78 /* cookie-appstore.png in Resources */,
 				04FEC03F1EFD824F00F8A6AA /* Main.storyboard in Resources */,
 				04FEC06B1F001CDE00F8A6AA /* iphone-icon-x3.png in Resources */,
 				04FEC0691F001CDE00F8A6AA /* ipad-icon-x2.png in Resources */,
@@ -209,6 +216,7 @@
 				04A45AA320A67B7A00438B9C /* screenshot_1.png in Resources */,
 				04FEC04F1EFD87EC00F8A6AA /* cookiex2.png in Resources */,
 				04FEC0501EFD87EC00F8A6AA /* cookie.png in Resources */,
+				0486BF8220A74991004EAC78 /* ipad-pro-icon-x1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
