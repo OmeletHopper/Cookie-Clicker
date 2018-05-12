@@ -99,7 +99,7 @@ class AutoClickerController: UITableViewController {
             CookieAmount -= Double(FarmVariable)
             
             FarmAmount += 1
-            FarmVariable = 100 * pow(1.15, Double(FarmAmount))
+            FarmVariable = 1100 * pow(1.15, Double(FarmAmount))
             refreshFarm()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
@@ -112,7 +112,7 @@ class AutoClickerController: UITableViewController {
             CookieAmount -= Double(MineVariable)
             
             MineAmount += 1
-            MineVariable = 500 * pow(1.15, Double(MineAmount))
+            MineVariable = 12000 * pow(1.15, Double(MineAmount))
             refreshMine()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
@@ -125,7 +125,7 @@ class AutoClickerController: UITableViewController {
             CookieAmount -= Double(FactoryVariable)
             
             FactoryAmount +=  1
-            FactoryVariable = 2000 * pow(1.15, Double(FactoryAmount))
+            FactoryVariable = 130000 * pow(1.15, Double(FactoryAmount))
             refreshFactory()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
