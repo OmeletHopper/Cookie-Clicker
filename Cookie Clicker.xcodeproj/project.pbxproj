@@ -12,6 +12,7 @@
 		045E821620A14A2D00C71914 /* AutoClickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E821520A14A2D00C71914 /* AutoClickerController.swift */; };
 		046B650D20A2922200D5B73B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B650C20A2922200D5B73B /* TabBarController.swift */; };
 		04A45AA120A672E600438B9C /* AutoClickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A45AA020A672E600438B9C /* AutoClickerViewController.swift */; };
+		04A45AA320A67B7A00438B9C /* screenshot_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A45AA220A67B7900438B9C /* screenshot_1.png */; };
 		04FEC03A1EFD824F00F8A6AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */; };
 		04FEC03F1EFD824F00F8A6AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC03D1EFD824F00F8A6AA /* Main.storyboard */; };
 		04FEC0411EFD824F00F8A6AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0401EFD824F00F8A6AA /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		045E821520A14A2D00C71914 /* AutoClickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoClickerController.swift; sourceTree = "<group>"; };
 		046B650C20A2922200D5B73B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		04A45AA020A672E600438B9C /* AutoClickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoClickerViewController.swift; sourceTree = "<group>"; };
+		04A45AA220A67B7900438B9C /* screenshot_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screenshot_1.png; path = Screenshots/screenshot_1.png; sourceTree = SOURCE_ROOT; };
 		04FD507020A655320058094A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		04FEC0361EFD824F00F8A6AA /* Cookie Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cookie Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		045E821320A1440100C71914 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				04A45AA220A67B7900438B9C /* screenshot_1.png */,
 				04FEC0651F001CDE00F8A6AA /* ipad-icon-x2.png */,
 				04FEC0661F001CDE00F8A6AA /* ipad-icon-x1.png */,
 				04FEC0671F001CDE00F8A6AA /* iphone-icon-x3.png */,
@@ -161,7 +164,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "Jack Archer Enterprises";
+				ORGANIZATIONNAME = "Jonny Archer";
 				TargetAttributes = {
 					04FEC0351EFD824F00F8A6AA = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -204,6 +207,7 @@
 				04FEC06B1F001CDE00F8A6AA /* iphone-icon-x3.png in Resources */,
 				04FEC0691F001CDE00F8A6AA /* ipad-icon-x2.png in Resources */,
 				04FEC06A1F001CDE00F8A6AA /* ipad-icon-x1.png in Resources */,
+				04A45AA320A67B7A00438B9C /* screenshot_1.png in Resources */,
 				04FEC04F1EFD87EC00F8A6AA /* cookiex2.png in Resources */,
 				04FEC0501EFD87EC00F8A6AA /* cookie.png in Resources */,
 			);
