@@ -21,7 +21,6 @@
 		04FEC0501EFD87EC00F8A6AA /* cookie.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC04E1EFD87EC00F8A6AA /* cookie.png */; };
 		04FEC0521EFD93D000F8A6AA /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0511EFD93D000F8A6AA /* background.png */; };
 		04FEC0541EFE0E2C00F8A6AA /* cookie-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0531EFE0E2C00F8A6AA /* cookie-icon.png */; };
-		04FEC0561EFE0F2600F8A6AA /* gears-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0551EFE0F2600F8A6AA /* gears-icon.png */; };
 		04FEC0591EFF684900F8A6AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEC03B1EFD824F00F8A6AA /* ViewController.swift */; };
 		04FEC0691F001CDE00F8A6AA /* ipad-icon-x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0651F001CDE00F8A6AA /* ipad-icon-x2.png */; };
 		04FEC06A1F001CDE00F8A6AA /* ipad-icon-x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0661F001CDE00F8A6AA /* ipad-icon-x1.png */; };
@@ -48,7 +47,6 @@
 		04FEC04E1EFD87EC00F8A6AA /* cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookie.png; sourceTree = "<group>"; };
 		04FEC0511EFD93D000F8A6AA /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		04FEC0531EFE0E2C00F8A6AA /* cookie-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cookie-icon.png"; sourceTree = "<group>"; };
-		04FEC0551EFE0F2600F8A6AA /* gears-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gears-icon.png"; sourceTree = "<group>"; };
 		04FEC0651F001CDE00F8A6AA /* ipad-icon-x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-icon-x2.png"; sourceTree = "<group>"; };
 		04FEC0661F001CDE00F8A6AA /* ipad-icon-x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-icon-x1.png"; sourceTree = "<group>"; };
 		04FEC0671F001CDE00F8A6AA /* iphone-icon-x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-icon-x3.png"; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 				04FEC0661F001CDE00F8A6AA /* ipad-icon-x1.png */,
 				04FEC0671F001CDE00F8A6AA /* iphone-icon-x3.png */,
 				04FEC0681F001CDE00F8A6AA /* iphone-icon-x2.png */,
-				04FEC0551EFE0F2600F8A6AA /* gears-icon.png */,
 				04FEC0531EFE0E2C00F8A6AA /* cookie-icon.png */,
 				04FEC0511EFD93D000F8A6AA /* background.png */,
 				04FEC04D1EFD87EC00F8A6AA /* cookiex2.png */,
@@ -198,7 +195,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FEC0441EFD824F00F8A6AA /* LaunchScreen.storyboard in Resources */,
-				04FEC0561EFE0F2600F8A6AA /* gears-icon.png in Resources */,
 				04FEC0521EFD93D000F8A6AA /* background.png in Resources */,
 				04FEC0411EFD824F00F8A6AA /* Assets.xcassets in Resources */,
 				04FEC0541EFE0E2C00F8A6AA /* cookie-icon.png in Resources */,
