@@ -52,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4T-P3-dAH">
-                                <rect key="frame" x="230" y="241" width="21" height="21"/>
+                                <rect key="frame" x="294" y="177" width="21" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="21" id="3gG-Qb-dxT"/>
                                 </constraints>
@@ -67,7 +67,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uom-ze-h6K">
-                                <rect key="frame" x="123" y="270" width="128" height="128"/>
+                                <rect key="frame" x="59" y="206" width="256" height="256"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
@@ -469,13 +469,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEE-PL-dmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3969" y="-1016"/>
+            <point key="canvasLocation" x="2580" y="-1047"/>
         </scene>
         <!--Other Cells-->
         <scene sceneID="m98-fJ-1IR">
             <objects>
                 <tableViewController title="Other Cells" id="QpO-gB-fRb" customClass="OtherController" customModule="Cookie_Clicker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5da-d7-CRd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5da-d7-CRd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -590,12 +590,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dS1-bk-aw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4652" y="-1016.4917541229386"/>
+            <point key="canvasLocation" x="4028" y="-1047"/>
         </scene>
         <!--Auto Clickers-->
         <scene sceneID="31l-px-hYU">
             <objects>
-                <viewController title="Auto Clickers" id="So9-VF-l0B" customClass="AutoClickerViewController" customModule="Cookie_Clicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Auto Clickers" id="So9-VF-l0B" customClass="CellsUIViewController" customModule="Cookie_Clicker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gA5-pB-SaQ"/>
                         <viewControllerLayoutGuide type="bottom" id="l7w-zw-Qjp"/>
@@ -607,7 +607,7 @@
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eL-oH-cgz">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Auto Clicker Upgrades" id="G7r-eG-eRu"/>
+                                    <navigationItem title="Auto Clickers" id="G7r-eG-eRu"/>
                                 </items>
                             </navigationBar>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsa-Kh-URz">
@@ -665,7 +665,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G9P-OT-8zI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3968.8000000000002" y="-260.41979010494754"/>
+            <point key="canvasLocation" x="2580" y="-260"/>
         </scene>
         <!--Main Tab Controller-->
         <scene sceneID="bbr-WZ-PPT">
@@ -678,10 +678,11 @@
                     </tabBar>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="defaultIndex">
-                            <integer key="value" value="1"/>
+                            <integer key="value" value="2"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <segue destination="BgJ-Nc-n7z" kind="relationship" relationship="viewControllers" id="aBt-SE-ztn"/>
                         <segue destination="So9-VF-l0B" kind="relationship" relationship="viewControllers" id="3ro-AX-DFa"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zGE-iU-uFF"/>
                         <segue destination="ybJ-Vx-rSp" kind="relationship" relationship="viewControllers" id="UfK-HA-5iU"/>
@@ -731,11 +732,83 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpP-4B-TIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4652" y="-260"/>
+            <point key="canvasLocation" x="4028" y="-260"/>
+        </scene>
+        <!--Auto Clickers-->
+        <scene sceneID="WkQ-PP-ete">
+            <objects>
+                <viewController title="Auto Clickers" id="BgJ-Nc-n7z" customClass="CellsUIViewController" customModule="Cookie_Clicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3A3-VY-0mN"/>
+                        <viewControllerLayoutGuide type="bottom" id="B3w-xW-XnV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="caI-JM-Wpi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2F-Br-CXR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Upgrades" id="CMM-NR-BZp"/>
+                                </items>
+                            </navigationBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2C-bg-Iv8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="510"/>
+                            </containerView>
+                            <toolbar opaque="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkP-Pq-spm">
+                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
+                                <items/>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cookies" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnS-Wu-EFf">
+                                <rect key="frame" x="297" y="584" width="62" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="3Fj-d5-ZPW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMg-Al-jVT">
+                                <rect key="frame" x="16" y="588" width="273" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="nR9-bw-S4C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QMg-Al-jVT" firstAttribute="leading" secondItem="caI-JM-Wpi" secondAttribute="leadingMargin" id="3TA-Yk-i0k"/>
+                            <constraint firstItem="qkP-Pq-spm" firstAttribute="centerY" secondItem="QMg-Al-jVT" secondAttribute="centerY" id="3k1-sd-aYo"/>
+                            <constraint firstItem="O2F-Br-CXR" firstAttribute="leading" secondItem="W2C-bg-Iv8" secondAttribute="leading" id="42L-K3-fgS"/>
+                            <constraint firstAttribute="trailing" secondItem="O2F-Br-CXR" secondAttribute="trailing" id="6QW-tH-3uk"/>
+                            <constraint firstItem="W2C-bg-Iv8" firstAttribute="top" secondItem="O2F-Br-CXR" secondAttribute="bottom" id="E1e-UT-RfU"/>
+                            <constraint firstItem="O2F-Br-CXR" firstAttribute="leading" secondItem="caI-JM-Wpi" secondAttribute="leading" id="QwL-cq-NAS"/>
+                            <constraint firstItem="qkP-Pq-spm" firstAttribute="bottom" secondItem="B3w-xW-XnV" secondAttribute="top" id="R8n-Ws-apn"/>
+                            <constraint firstItem="lnS-Wu-EFf" firstAttribute="leading" secondItem="QMg-Al-jVT" secondAttribute="trailing" constant="8" symbolic="YES" id="WVL-zp-HZw"/>
+                            <constraint firstItem="qkP-Pq-spm" firstAttribute="top" secondItem="W2C-bg-Iv8" secondAttribute="bottom" id="XyC-rv-pDq"/>
+                            <constraint firstItem="O2F-Br-CXR" firstAttribute="trailing" secondItem="W2C-bg-Iv8" secondAttribute="trailing" id="eOx-cU-7GM"/>
+                            <constraint firstItem="lnS-Wu-EFf" firstAttribute="trailing" secondItem="caI-JM-Wpi" secondAttribute="trailingMargin" id="hbp-Xq-d4m"/>
+                            <constraint firstItem="O2F-Br-CXR" firstAttribute="top" secondItem="3A3-VY-0mN" secondAttribute="bottom" id="q9b-XF-R7W"/>
+                            <constraint firstItem="QMg-Al-jVT" firstAttribute="baseline" secondItem="lnS-Wu-EFf" secondAttribute="baseline" id="saV-5X-a6q"/>
+                            <constraint firstItem="W2C-bg-Iv8" firstAttribute="trailing" secondItem="qkP-Pq-spm" secondAttribute="trailing" id="smm-jA-rPj"/>
+                            <constraint firstItem="W2C-bg-Iv8" firstAttribute="leading" secondItem="qkP-Pq-spm" secondAttribute="leading" id="w67-8L-eTr"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Upgrades" image="cookie-icon.png" selectedImage="cookie-icon.png" id="4py-gK-MwS"/>
+                    <connections>
+                        <outlet property="cookieLabel" destination="QMg-Al-jVT" id="HPD-HM-jXr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfl-kZ-cEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1879" y="-260"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Cookie" width="128" height="128"/>
+        <image name="Cookie" width="256" height="256"/>
         <image name="cookie-icon.png" width="20" height="20"/>
     </resources>
 </document>

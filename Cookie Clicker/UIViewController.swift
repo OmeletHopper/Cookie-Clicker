@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AutoClickerViewController: UIViewController {
+class CellsUIViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
