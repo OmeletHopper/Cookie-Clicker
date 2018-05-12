@@ -8,7 +8,7 @@ Just make sure your code makes sense, and send us a PR.
 
 ## Bug Reporting
 I think of this as a way of contributing, but if you encounter any problems or unexpected behaviour, please [report it to us](https://github.com/OmeletHopper/Cookie-Clicker/issues/new).
-Remember to do the "Bug" label.
+Remember to use the "Bug" label.
 
 ## Feature Requesting
 If you have an idea you think should be implemented, don't be afraid to let us know! Just [start an issue](https://github.com/OmeletHopper/Cookie-Clicker/issues/new).
