@@ -899,20 +899,26 @@
                                 <rect key="frame" x="0.0" y="574" width="375" height="44"/>
                                 <items/>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cookies" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srq-bw-0lw">
-                                <rect key="frame" x="297" y="584" width="62" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="62" id="Yv2-5S-ecT"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OR-mC-WOx">
+                                <rect key="frame" x="147.5" y="585" width="10.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OR-mC-WOx">
-                                <rect key="frame" x="16" y="588" width="273" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="AzG-7d-Aew"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRj-57-MQY">
+                                <rect key="frame" x="16" y="586" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEi-eT-DN8">
+                                <rect key="frame" x="58" y="586" width="10.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cookies:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srq-bw-0lw">
+                                <rect key="frame" x="76.5" y="585" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -920,31 +926,35 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="4OR-mC-WOx" firstAttribute="centerY" secondItem="69C-ru-AgC" secondAttribute="centerY" id="8Bj-I4-wYi"/>
+                            <constraint firstItem="Srq-bw-0lw" firstAttribute="leading" secondItem="sEi-eT-DN8" secondAttribute="trailing" constant="8" id="CN4-CL-dOe"/>
+                            <constraint firstItem="sEi-eT-DN8" firstAttribute="leading" secondItem="xRj-57-MQY" secondAttribute="trailing" priority="999" constant="4" id="DSk-gL-6sn"/>
                             <constraint firstItem="69C-ru-AgC" firstAttribute="bottom" secondItem="l7w-zw-Qjp" secondAttribute="top" id="EXE-Tm-PXv"/>
                             <constraint firstItem="lsa-Kh-URz" firstAttribute="trailing" secondItem="69C-ru-AgC" secondAttribute="trailing" id="Gf4-Dz-CVS"/>
-                            <constraint firstItem="69C-ru-AgC" firstAttribute="centerY" secondItem="4OR-mC-WOx" secondAttribute="centerY" id="Oqp-gC-awY"/>
+                            <constraint firstItem="Srq-bw-0lw" firstAttribute="centerY" secondItem="69C-ru-AgC" secondAttribute="centerY" id="Hw5-8M-OsQ"/>
                             <constraint firstItem="0eL-oH-cgz" firstAttribute="leading" secondItem="7X8-Sa-uOe" secondAttribute="leading" id="Pq1-dG-Uhd"/>
+                            <constraint firstItem="sEi-eT-DN8" firstAttribute="centerY" secondItem="69C-ru-AgC" secondAttribute="centerY" id="Put-2T-Z22"/>
                             <constraint firstItem="0eL-oH-cgz" firstAttribute="trailing" secondItem="lsa-Kh-URz" secondAttribute="trailing" id="R4r-Em-8eM"/>
+                            <constraint firstItem="69C-ru-AgC" firstAttribute="leading" secondItem="xRj-57-MQY" secondAttribute="trailing" constant="-54" id="YQf-TL-AiA"/>
                             <constraint firstItem="0eL-oH-cgz" firstAttribute="leading" secondItem="lsa-Kh-URz" secondAttribute="leading" id="aRK-GZ-eBs"/>
-                            <constraint firstItem="Srq-bw-0lw" firstAttribute="leading" secondItem="4OR-mC-WOx" secondAttribute="trailing" constant="8" symbolic="YES" id="dgg-SW-8f3"/>
+                            <constraint firstItem="4OR-mC-WOx" firstAttribute="leading" secondItem="Srq-bw-0lw" secondAttribute="trailing" constant="4" id="dlo-5M-llD"/>
                             <constraint firstAttribute="trailing" secondItem="0eL-oH-cgz" secondAttribute="trailing" id="erN-bN-zrQ"/>
                             <constraint firstItem="69C-ru-AgC" firstAttribute="top" secondItem="lsa-Kh-URz" secondAttribute="bottom" id="jYe-lC-xcE"/>
-                            <constraint firstItem="Srq-bw-0lw" firstAttribute="trailing" secondItem="7X8-Sa-uOe" secondAttribute="trailingMargin" id="kOJ-9c-adv"/>
+                            <constraint firstItem="xRj-57-MQY" firstAttribute="centerY" secondItem="69C-ru-AgC" secondAttribute="centerY" id="oP9-UF-lMT"/>
                             <constraint firstItem="0eL-oH-cgz" firstAttribute="top" secondItem="gA5-pB-SaQ" secondAttribute="bottom" id="og1-cd-0pq"/>
                             <constraint firstItem="lsa-Kh-URz" firstAttribute="leading" secondItem="69C-ru-AgC" secondAttribute="leading" id="pxh-2G-nmh"/>
                             <constraint firstItem="lsa-Kh-URz" firstAttribute="top" secondItem="0eL-oH-cgz" secondAttribute="bottom" id="tE5-4z-TCt"/>
-                            <constraint firstItem="4OR-mC-WOx" firstAttribute="leading" secondItem="7X8-Sa-uOe" secondAttribute="leadingMargin" id="yS5-A3-bTM"/>
-                            <constraint firstItem="4OR-mC-WOx" firstAttribute="baseline" secondItem="Srq-bw-0lw" secondAttribute="baseline" id="ydj-Im-81b"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Auto Clickers" image="cookie-icon.png" selectedImage="cookie-icon.png" id="OYa-fW-iZG"/>
                     <connections>
+                        <outlet property="CPSLabel" destination="sEi-eT-DN8" id="1pO-w5-0eA"/>
                         <outlet property="cookieLabel" destination="4OR-mC-WOx" id="kkj-Bi-Qat"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G9P-OT-8zI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2580" y="-260"/>
+            <point key="canvasLocation" x="2580" y="-260.41979010494754"/>
         </scene>
         <!--Main Tab Controller-->
         <scene sceneID="bbr-WZ-PPT">
@@ -1041,20 +1051,26 @@
                                 <rect key="frame" x="0.0" y="574" width="375" height="44"/>
                                 <items/>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cookies" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnS-Wu-EFf">
-                                <rect key="frame" x="297" y="584" width="62" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="62" id="3Fj-d5-ZPW"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3v-FH-ZlN">
+                                <rect key="frame" x="58" y="586" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMg-Al-jVT">
-                                <rect key="frame" x="16" y="588" width="273" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="nR9-bw-S4C"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nc-X5-e8h">
+                                <rect key="frame" x="16" y="586" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cookies:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnS-Wu-EFf">
+                                <rect key="frame" x="77" y="586" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMg-Al-jVT">
+                                <rect key="frame" x="148" y="586" width="10.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1062,31 +1078,35 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QMg-Al-jVT" firstAttribute="leading" secondItem="caI-JM-Wpi" secondAttribute="leadingMargin" id="3TA-Yk-i0k"/>
                             <constraint firstItem="qkP-Pq-spm" firstAttribute="centerY" secondItem="QMg-Al-jVT" secondAttribute="centerY" id="3k1-sd-aYo"/>
                             <constraint firstItem="O2F-Br-CXR" firstAttribute="leading" secondItem="W2C-bg-Iv8" secondAttribute="leading" id="42L-K3-fgS"/>
                             <constraint firstAttribute="trailing" secondItem="O2F-Br-CXR" secondAttribute="trailing" id="6QW-tH-3uk"/>
+                            <constraint firstItem="z3v-FH-ZlN" firstAttribute="centerY" secondItem="qkP-Pq-spm" secondAttribute="centerY" id="8HX-wm-crL"/>
+                            <constraint firstItem="lnS-Wu-EFf" firstAttribute="centerY" secondItem="qkP-Pq-spm" secondAttribute="centerY" id="Aka-uq-K0A"/>
                             <constraint firstItem="W2C-bg-Iv8" firstAttribute="top" secondItem="O2F-Br-CXR" secondAttribute="bottom" id="E1e-UT-RfU"/>
+                            <constraint firstItem="qkP-Pq-spm" firstAttribute="leading" secondItem="1Nc-X5-e8h" secondAttribute="trailing" constant="-54" id="Ln3-B2-kl5"/>
+                            <constraint firstItem="1Nc-X5-e8h" firstAttribute="centerY" secondItem="qkP-Pq-spm" secondAttribute="centerY" id="Q8K-54-8ho"/>
                             <constraint firstItem="O2F-Br-CXR" firstAttribute="leading" secondItem="caI-JM-Wpi" secondAttribute="leading" id="QwL-cq-NAS"/>
                             <constraint firstItem="qkP-Pq-spm" firstAttribute="bottom" secondItem="B3w-xW-XnV" secondAttribute="top" id="R8n-Ws-apn"/>
-                            <constraint firstItem="lnS-Wu-EFf" firstAttribute="leading" secondItem="QMg-Al-jVT" secondAttribute="trailing" constant="8" symbolic="YES" id="WVL-zp-HZw"/>
                             <constraint firstItem="qkP-Pq-spm" firstAttribute="top" secondItem="W2C-bg-Iv8" secondAttribute="bottom" id="XyC-rv-pDq"/>
+                            <constraint firstItem="lnS-Wu-EFf" firstAttribute="leading" secondItem="z3v-FH-ZlN" secondAttribute="trailing" constant="8" id="Ykq-47-Xet"/>
+                            <constraint firstItem="QMg-Al-jVT" firstAttribute="leading" secondItem="lnS-Wu-EFf" secondAttribute="trailing" constant="4" id="Zg5-yz-3VM"/>
                             <constraint firstItem="O2F-Br-CXR" firstAttribute="trailing" secondItem="W2C-bg-Iv8" secondAttribute="trailing" id="eOx-cU-7GM"/>
-                            <constraint firstItem="lnS-Wu-EFf" firstAttribute="trailing" secondItem="caI-JM-Wpi" secondAttribute="trailingMargin" id="hbp-Xq-d4m"/>
                             <constraint firstItem="O2F-Br-CXR" firstAttribute="top" secondItem="3A3-VY-0mN" secondAttribute="bottom" id="q9b-XF-R7W"/>
-                            <constraint firstItem="QMg-Al-jVT" firstAttribute="baseline" secondItem="lnS-Wu-EFf" secondAttribute="baseline" id="saV-5X-a6q"/>
+                            <constraint firstItem="z3v-FH-ZlN" firstAttribute="leading" secondItem="1Nc-X5-e8h" secondAttribute="trailing" constant="4" id="sS8-x9-CJL"/>
                             <constraint firstItem="W2C-bg-Iv8" firstAttribute="trailing" secondItem="qkP-Pq-spm" secondAttribute="trailing" id="smm-jA-rPj"/>
                             <constraint firstItem="W2C-bg-Iv8" firstAttribute="leading" secondItem="qkP-Pq-spm" secondAttribute="leading" id="w67-8L-eTr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upgrades" image="cookie-icon.png" selectedImage="cookie-icon.png" id="4py-gK-MwS"/>
                     <connections>
+                        <outlet property="CPSLabel" destination="z3v-FH-ZlN" id="LSg-q4-ZqE"/>
                         <outlet property="cookieLabel" destination="QMg-Al-jVT" id="HPD-HM-jXr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfl-kZ-cEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879" y="-260"/>
+            <point key="canvasLocation" x="1877.5999999999999" y="-260.41979010494754"/>
         </scene>
     </scenes>
     <resources>
