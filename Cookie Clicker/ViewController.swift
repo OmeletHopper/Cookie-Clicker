@@ -30,7 +30,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         assignBackground()
-        _ = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(auto), userInfo: nil, repeats: true)
+        let cookieUpdateTimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(auto), userInfo: nil, repeats: true)
+        RunLoop.current.add(cookieUpdateTimer, forMode: RunLoopMode.commonModes)
         _ = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(save), userInfo: nil, repeats: true)
         NotificationCenter.default.addObserver(self, selector: #selector(updateCookie), name: NSNotification.Name(rawValue: "updateCookieLabel"), object: nil)
     }

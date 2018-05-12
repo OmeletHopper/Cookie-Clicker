@@ -1,5 +1,5 @@
 //
-//  UpgradeViewController.swift
+//  AutoClickerController.swift
 //  Cookie Clicker
 //
 //  Created by Jonathan Archer on 5/7/18.
@@ -12,7 +12,7 @@ class UpgradeViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         refreshCursor()
         refreshGrandma()
         refreshMine()
@@ -23,7 +23,7 @@ class UpgradeViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     @IBOutlet weak var CursorBuy: UIButton!
     @IBOutlet weak var CursorLabel: UILabel!
     @IBOutlet weak var CursorAmountLabel: UILabel!
