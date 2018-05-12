@@ -8,147 +8,100 @@
 
 import Foundation
 
+let CookieSave = "CookieSave"
 var CookieAmount = 0.0
 
+let CursorSave = "CursorSave"
 var CursorVariable = 15.0
 var CursorAmount = 0
 
+let GrandmaSave = "GrandmaSave"
 var GrandmaVariable = 100.0
 var GrandmaAmount = 0
 
+let FarmSave = "FarmSave"
 var FarmVariable = 1100.0
 var FarmAmount = 0
 
+let MineSave = "MineSave"
 var MineVariable = 12000.0
 var MineAmount = 0
 
+let FactorySave = "FactorySave"
 var FactoryVariable = 130000.0
 var FactoryAmount = 0
 
-var fileName = "";
 let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-var fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
 
-func restoreData() {
+func restoreAllData() {
+    CookieAmount = restoreDoubleData(FileName: CookieSave)
     
-    fileName = "CookieSave"
-    fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-    print("FilePath: \(fileURL.path)")
-    do {
-        CookieAmount = try Double(String(contentsOf: fileURL))!
-    }
-    catch let error as NSError {
-        print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
-    }
-
-    fileName = "CursorAmountSave"
-    fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-    print("FilePath: \(fileURL.path)")
-    do {
-        CursorAmount = try Int(String(contentsOf: fileURL))!
-    } catch let error as NSError {
-        print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
-    }
+    CursorAmount = restoreIntData(FileName: CursorSave)
     CursorVariable *= pow(1.15, Double(CursorAmount))
-
-    fileName = "GrandmaAmountSave"
-    fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-    print("FilePath: \(fileURL.path)")
-
-    do {
-        GrandmaAmount = try Int(String(contentsOf: fileURL))!
-    } catch let error as NSError {
-        print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
-    }
+    GrandmaAmount = restoreIntData(FileName: GrandmaSave)
     GrandmaVariable *= pow(1.15, Double(GrandmaAmount))
-    
-    fileName = "FarmAmountSave"
-    fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-    print("FilePath: \(fileURL.path)")
-    
-    do {
-        FarmAmount = try Int(String(contentsOf: fileURL))!
-    } catch let error as NSError {
-        print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
-    }
+    FarmAmount = restoreIntData(FileName: FarmSave)
     FarmVariable *= pow(1.15, Double(FarmAmount))
-
-    fileName = "MineAmountSave"
-    fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-    print("FilePath: \(fileURL.path)")
-    do {
-        MineAmount = try Int(String(contentsOf: fileURL))!
-    } catch let error as NSError {
-       print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
-    }
+    MineAmount = restoreIntData(FileName: MineSave)
     MineVariable *= pow(1.15, Double(MineAmount))
-
-    fileName = "FactoryAmountSave"
-    fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-    print("FilePath: \(fileURL.path)")
-    do {
-        FactoryAmount = try Int(String(contentsOf: fileURL))!
-    } catch let error as NSError {
-        print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
-    }
+    FactoryAmount = restoreIntData(FileName: FactorySave)
     FactoryVariable *= pow(1.15, Double(FactoryAmount))
-
-    print("Amount of cookies: \(CookieAmount)")
 }
 
-func storeData() {
+func storeAllData() {
+    storeDoubleData(FileName: CookieSave, Data: CookieAmount)
     
-    fileName = "CookieSave"
-    fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-    print("FilePath: \(fileURL.path)")
-    do {
-        try String(CookieAmount).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
-    } catch let error as NSError {
-        print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-    }
+    storeIntData(FileName: CursorSave, Data: CursorAmount)
+    storeIntData(FileName: GrandmaSave, Data: GrandmaAmount)
+    storeIntData(FileName: FarmSave, Data: FarmAmount)
+    storeIntData(FileName: MineSave, Data: MineAmount)
+    storeIntData(FileName: FactorySave, Data: FactoryAmount)
+}
 
-    fileName = "CursorAmountSave"
-    fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-    print("FilePath: \(fileURL.path)")
+func restoreDoubleData(FileName: String) -> Double {
+    let FileURL = DocumentDirURL.appendingPathComponent(FileName).appendingPathExtension("txt")
+    print("FilePath: \(FileURL.path)")
     do {
-        try String(CursorAmount).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
-    } catch let error as NSError {
-        print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+        return try Double(String(contentsOf: FileURL))!
     }
+    catch let error as NSError {
+        print("Failed reading from URL: \(FileURL), Error: " + error.localizedDescription)
+        return 0.0
+    }
+}
 
-    fileName = "GrandmaAmountSave"
-    fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-    print("FilePath: \(fileURL.path)")
+func restoreIntData(FileName: String) -> Int {
+    let FileURL = DocumentDirURL.appendingPathComponent(FileName).appendingPathExtension("txt")
+    print("FilePath: \(FileURL.path)")
     do {
-        try String(GrandmaAmount).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
-    } catch let error as NSError {
-        print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+        return try Int(String(contentsOf: FileURL))!
     }
-    
-    fileName = "FarmAmountSave"
-    fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-    print("FilePath: \(fileURL.path)")
-    do {
-        try String(FarmAmount).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
-    } catch let error as NSError {
-        print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+    catch let error as NSError {
+        print("Failed reading from URL: \(FileURL), Error: " + error.localizedDescription)
+        return 0
     }
+}
 
-    fileName = "MineAmountSave"
-    fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-    print("FilePath: \(fileURL.path)")
+func storeDoubleData(FileName: String, Data: Double) -> Int {
+    let FileURL = DocumentDirURL.appendingPathComponent(FileName).appendingPathExtension("txt")
+    print("FilePath: \(FileURL.path)")
     do {
-        try String(MineAmount).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+        try String(Data).write(to: FileURL, atomically: true, encoding: String.Encoding.utf8)
     } catch let error as NSError {
-        print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+        print("Failed writing to URL: \(FileURL), Error: " + error.localizedDescription)
+        return 1
     }
+    return 0
+}
 
-    fileName = "FactoryAmountSave"
-    fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-    print("FilePath: \(fileURL.path)")
+func storeIntData(FileName: String, Data: Int) -> Int {
+    let FileURL = DocumentDirURL.appendingPathComponent(FileName).appendingPathExtension("txt")
+    print("FilePath: \(FileURL.path)")
     do {
-        try String(FactoryAmount).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+        try String(Data).write(to: FileURL, atomically: true, encoding: String.Encoding.utf8)
     } catch let error as NSError {
-        print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+        print("Failed writing to URL: \(FileURL), Error: " + error.localizedDescription)
+        return 1
     }
+    return 0
 }

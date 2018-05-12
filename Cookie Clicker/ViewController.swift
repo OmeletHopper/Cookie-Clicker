@@ -44,7 +44,7 @@ class ViewController: UIViewController {
 
     @objc func auto() { autoClicks() }
     
-    @objc func save() { storeData() }
+    @objc func save() { storeAllData() }
     
     func assignBackground(){
         plusOneLabel.isHidden = true
