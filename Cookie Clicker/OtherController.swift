@@ -11,6 +11,7 @@ import UIKit
 class OtherController: UITableViewController {
     
     @IBOutlet weak var DestroyDataButton: UIButton!
+    @IBOutlet weak var GitHubButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,5 +46,9 @@ class OtherController: UITableViewController {
     
     @IBAction func destroyDataPopup(_ sender: UIButton) {
         showDestroyDataDialog()
+    }
+    
+    @IBAction func openGitHubPage(_ sender: UIButton) {
+        UIApplication.shared.open(URL(string: "https://github.com/omelethopper/cookie-clicker")!)
     }
 }
