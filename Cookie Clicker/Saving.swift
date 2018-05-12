@@ -16,10 +16,13 @@ var CursorAmount = 0
 var GrandmaVariable = 100.0
 var GrandmaAmount = 0
 
-var MineVariable = 500.0
+var FarmVariable = 1100.0
+var FarmAmount = 0
+
+var MineVariable = 12000.0
 var MineAmount = 0
 
-var FactoryVariable = 2000.0
+var FactoryVariable = 130000.0
 var FactoryAmount = 0
 
 var fileName = "";
@@ -46,7 +49,7 @@ func restoreData() {
     } catch let error as NSError {
         print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
     }
-    CursorVariable = 15 * pow(1.15, Double(CursorAmount))
+    CursorVariable *= pow(1.15, Double(CursorAmount))
 
     fileName = "GrandmaAmountSave"
     fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
@@ -57,7 +60,18 @@ func restoreData() {
     } catch let error as NSError {
         print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
     }
-    GrandmaVariable = 100 * pow(1.15, Double(GrandmaAmount))
+    GrandmaVariable *= pow(1.15, Double(GrandmaAmount))
+    
+    fileName = "FarmAmountSave"
+    fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
+    print("FilePath: \(fileURL.path)")
+    
+    do {
+        FarmAmount = try Int(String(contentsOf: fileURL))!
+    } catch let error as NSError {
+        print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
+    }
+    FarmVariable *= pow(1.15, Double(FarmAmount))
 
     fileName = "MineAmountSave"
     fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
@@ -67,7 +81,7 @@ func restoreData() {
     } catch let error as NSError {
        print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
     }
-    MineVariable = 500 * pow(1.15, Double(MineAmount))
+    MineVariable *= pow(1.15, Double(MineAmount))
 
     fileName = "FactoryAmountSave"
     fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
@@ -77,23 +91,9 @@ func restoreData() {
     } catch let error as NSError {
         print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
     }
-    FactoryVariable = 2000 * pow(1.15, Double(FactoryAmount))
+    FactoryVariable *= pow(1.15, Double(FactoryAmount))
 
     print("Amount of cookies: \(CookieAmount)")
-    
-    /* Check if values are below what they should be. */
-    if CursorVariable <= 14 {
-        CursorVariable = 15
-    }
-    if GrandmaVariable <= 99 {
-        GrandmaVariable = 100
-    }
-    if MineVariable <= 499 {
-        MineVariable = 500
-    }
-    if FactoryVariable <= 1999 {
-        FactoryVariable = 2000
-    }
 }
 
 func storeData() {
@@ -121,6 +121,15 @@ func storeData() {
     print("FilePath: \(fileURL.path)")
     do {
         try String(GrandmaAmount).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+    } catch let error as NSError {
+        print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+    }
+    
+    fileName = "FarmAmountSave"
+    fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
+    print("FilePath: \(fileURL.path)")
+    do {
+        try String(FarmAmount).write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
     } catch let error as NSError {
         print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
     }

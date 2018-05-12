@@ -15,6 +15,7 @@ class AutoClickerController: UITableViewController {
         
         refreshCursor()
         refreshGrandma()
+        refreshFarm()
         refreshMine()
         refreshFactory()
     }
@@ -32,6 +33,10 @@ class AutoClickerController: UITableViewController {
     @IBOutlet weak var GrandmaLabel: UILabel!
     @IBOutlet weak var GrandmaAmountLabel: UILabel!
     
+    @IBOutlet weak var FarmBuy: UIButton!
+    @IBOutlet weak var FarmLabel: UILabel!
+    @IBOutlet weak var FarmAmountLabel: UILabel!
+    
     @IBOutlet weak var MineBuy: UIButton!
     @IBOutlet weak var MineLabel: UILabel!
     @IBOutlet weak var MineAmountLabel: UILabel!
@@ -47,6 +52,10 @@ class AutoClickerController: UITableViewController {
     func refreshGrandma() {
         self.GrandmaLabel.text = String(format: "%.0f", GrandmaVariable)
         self.GrandmaAmountLabel.text = "\(GrandmaAmount)"
+    }
+    func refreshFarm() {
+        self.FarmLabel.text = String(format: "%.0f", FarmVariable)
+        self.FarmAmountLabel.text = "\(FarmAmount)"
     }
     func refreshMine() {
         self.MineLabel.text = String(format: "%.0f", MineVariable)
@@ -79,6 +88,19 @@ class AutoClickerController: UITableViewController {
             GrandmaAmount += 1
             GrandmaVariable = 100 * pow(1.15, Double(GrandmaAmount))
             refreshGrandma()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+        }
+    }
+    
+    @IBAction func AddFarm(_ sender: UIButton) {
+        
+        if CookieAmount >= Double(FarmVariable) {
+            
+            CookieAmount -= Double(FarmVariable)
+            
+            FarmAmount += 1
+            FarmVariable = 100 * pow(1.15, Double(FarmAmount))
+            refreshFarm()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
     }

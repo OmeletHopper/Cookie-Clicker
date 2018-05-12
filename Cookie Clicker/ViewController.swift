@@ -16,10 +16,11 @@ var CookiesToAdd = 0.0;
  This means that everything gets divided by 100.
 */
 func autoClicks() {
-    CookiesToAdd = Double(CursorAmount) * 0.001    // Cursors add .1/S.
+    CookiesToAdd = Double(CursorAmount) * 0.001     // Cursors add .1/S.
     CookiesToAdd += Double(GrandmaAmount) * 0.01    // Grandmas add 1/S.
-    CookiesToAdd += Double(MineAmount) * 0.03       // Mines add 3/S.
-    CookiesToAdd += Double(FactoryAmount) * 0.05    // Factories add 5/S.
+    CookiesToAdd += Double(FarmAmount) * 0.08       // Grandmas add 1/S.
+    CookiesToAdd += Double(MineAmount) * 0.47       // Mines add 3/S.
+    CookiesToAdd += Double(FactoryAmount) * 2.60    // Factories add 5/S.
     CookieAmount += CookiesToAdd
     
     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateCookieLabel"), object: nil)
