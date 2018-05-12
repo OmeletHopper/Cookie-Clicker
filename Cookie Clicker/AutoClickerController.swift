@@ -12,12 +12,8 @@ class AutoClickerController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        refreshCursor()
-        refreshGrandma()
-        refreshFarm()
-        refreshMine()
-        refreshFactory()
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshAll), name: NSNotification.Name(rawValue: "refreshAutoClickers"), object: nil)
+        refreshAll()
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,35 +41,47 @@ class AutoClickerController: UITableViewController {
     @IBOutlet weak var FactoryLabel: UILabel!
     @IBOutlet weak var FactoryAmountLabel: UILabel!
     
+    @objc func refreshAll() {
+        refreshCursor()
+        refreshGrandma()
+        refreshFarm()
+        refreshMine()
+        refreshFactory()
+    }
+    
     func refreshCursor() {
-        self.CursorLabel.text = String(format: "%.0f", CursorVariable)
+        self.CursorLabel.text = String(format: "%.0f", CursorCost)
         self.CursorAmountLabel.text = "\(CursorAmount)"
     }
+    
     func refreshGrandma() {
-        self.GrandmaLabel.text = String(format: "%.0f", GrandmaVariable)
+        self.GrandmaLabel.text = String(format: "%.0f", GrandmaCost)
         self.GrandmaAmountLabel.text = "\(GrandmaAmount)"
     }
+    
     func refreshFarm() {
-        self.FarmLabel.text = String(format: "%.0f", FarmVariable)
+        self.FarmLabel.text = String(format: "%.0f", FarmCost)
         self.FarmAmountLabel.text = "\(FarmAmount)"
     }
+    
     func refreshMine() {
-        self.MineLabel.text = String(format: "%.0f", MineVariable)
+        self.MineLabel.text = String(format: "%.0f", MineCost)
         self.MineAmountLabel.text = "\(MineAmount)"
     }
+    
     func refreshFactory() {
-        self.FactoryLabel.text = String(format: "%.0f", FactoryVariable)
+        self.FactoryLabel.text = String(format: "%.0f", FactoryCost)
         self.FactoryAmountLabel.text = "\(FactoryAmount)"
     }
     
     @IBAction func AddCursor(_ sender: UIButton) {
         
-        if CookieAmount >= Double(CursorVariable) {
+        if CookieAmount >= Double(CursorCost) {
             
-            CookieAmount -= Double(CursorVariable)
+            CookieAmount -= Double(CursorCost)
             
             CursorAmount += 1
-            CursorVariable = 15 * pow(1.15, Double(CursorAmount))
+            CursorCost = 15 * pow(1.15, Double(CursorAmount))
             refreshCursor()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
@@ -81,12 +89,12 @@ class AutoClickerController: UITableViewController {
     
     @IBAction func AddGrandma(_ sender: UIButton) {
         
-        if CookieAmount >= Double(GrandmaVariable) {
+        if CookieAmount >= Double(GrandmaCost) {
             
-            CookieAmount -= Double(GrandmaVariable)
+            CookieAmount -= Double(GrandmaCost)
             
             GrandmaAmount += 1
-            GrandmaVariable = 100 * pow(1.15, Double(GrandmaAmount))
+            GrandmaCost = 100 * pow(1.15, Double(GrandmaAmount))
             refreshGrandma()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
@@ -94,12 +102,12 @@ class AutoClickerController: UITableViewController {
     
     @IBAction func AddFarm(_ sender: UIButton) {
         
-        if CookieAmount >= Double(FarmVariable) {
+        if CookieAmount >= Double(FarmCost) {
             
-            CookieAmount -= Double(FarmVariable)
+            CookieAmount -= Double(FarmCost)
             
             FarmAmount += 1
-            FarmVariable = 1100 * pow(1.15, Double(FarmAmount))
+            FarmCost = 1100 * pow(1.15, Double(FarmAmount))
             refreshFarm()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
@@ -107,12 +115,12 @@ class AutoClickerController: UITableViewController {
     
     @IBAction func AddMine(_ sender: UIButton) {
         
-        if CookieAmount >= Double(MineVariable) {
+        if CookieAmount >= Double(MineCost) {
             
-            CookieAmount -= Double(MineVariable)
+            CookieAmount -= Double(MineCost)
             
             MineAmount += 1
-            MineVariable = 12000 * pow(1.15, Double(MineAmount))
+            MineCost = 12000 * pow(1.15, Double(MineAmount))
             refreshMine()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
@@ -120,12 +128,12 @@ class AutoClickerController: UITableViewController {
     
     @IBAction func AddFactory(_ sender: UIButton) {
         
-        if CookieAmount >= Double(FactoryVariable) {
+        if CookieAmount >= Double(FactoryCost) {
             
-            CookieAmount -= Double(FactoryVariable)
+            CookieAmount -= Double(FactoryCost)
             
             FactoryAmount +=  1
-            FactoryVariable = 130000 * pow(1.15, Double(FactoryAmount))
+            FactoryCost = 130000 * pow(1.15, Double(FactoryAmount))
             refreshFactory()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }

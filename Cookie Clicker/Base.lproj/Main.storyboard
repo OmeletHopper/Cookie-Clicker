@@ -478,7 +478,7 @@
         <!--Other Cells-->
         <scene sceneID="m98-fJ-1IR">
             <objects>
-                <tableViewController title="Other Cells" id="QpO-gB-fRb" sceneMemberID="viewController">
+                <tableViewController title="Other Cells" id="QpO-gB-fRb" customClass="OtherController" customModule="Cookie_Clicker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5da-d7-CRd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -556,6 +556,31 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Danger Zone" id="yqN-OW-Jct">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5d8-2y-YqN">
+                                        <rect key="frame" x="0.0" y="342.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5d8-2y-YqN" id="Ucz-uc-kbd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bY-IB-VVT">
+                                                    <rect key="frame" x="132" y="7" width="111" height="30"/>
+                                                    <state key="normal" title="Destroy All Data"/>
+                                                    <connections>
+                                                        <action selector="destroyDataPopup:" destination="QpO-gB-fRb" eventType="touchUpInside" id="5j1-gQ-vHI"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3bY-IB-VVT" firstAttribute="centerY" secondItem="Ucz-uc-kbd" secondAttribute="centerY" id="3GU-uJ-D3V"/>
+                                                <constraint firstItem="3bY-IB-VVT" firstAttribute="centerX" secondItem="Ucz-uc-kbd" secondAttribute="centerX" id="cZs-G6-cjT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="QpO-gB-fRb" id="NTA-1G-ENy"/>
@@ -563,10 +588,13 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Other" image="cookie-icon.png" selectedImage="cookie-icon.png" id="x7f-Qu-DD1"/>
+                    <connections>
+                        <outlet property="DestroyDataButton" destination="3bY-IB-VVT" id="vKp-70-rwi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dS1-bk-aw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4652" y="-1016"/>
+            <point key="canvasLocation" x="4652" y="-1016.4917541229386"/>
         </scene>
         <!--Auto Clickers-->
         <scene sceneID="31l-px-hYU">

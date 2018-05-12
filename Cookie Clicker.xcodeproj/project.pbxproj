@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04079D7D20A2658F007CED2B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04079D7C20A2658F007CED2B /* QuartzCore.framework */; };
+		042FDE5E20A72E6B00490916 /* OtherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042FDE5D20A72E6B00490916 /* OtherController.swift */; };
 		0446F3C420A12CC800B9618C /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0446F3C320A12CC800B9618C /* Saving.swift */; };
 		045E821620A14A2D00C71914 /* AutoClickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E821520A14A2D00C71914 /* AutoClickerController.swift */; };
 		046B650D20A2922200D5B73B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B650C20A2922200D5B73B /* TabBarController.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		04079D7C20A2658F007CED2B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		042FDE5D20A72E6B00490916 /* OtherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherController.swift; sourceTree = "<group>"; };
 		0446F3C320A12CC800B9618C /* Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
 		045E821520A14A2D00C71914 /* AutoClickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoClickerController.swift; sourceTree = "<group>"; };
 		046B650C20A2922200D5B73B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */,
 				04FEC03B1EFD824F00F8A6AA /* ViewController.swift */,
 				045E821520A14A2D00C71914 /* AutoClickerController.swift */,
+				042FDE5D20A72E6B00490916 /* OtherController.swift */,
 				04A45AA020A672E600438B9C /* AutoClickerViewController.swift */,
 				0446F3C320A12CC800B9618C /* Saving.swift */,
 				046B650C20A2922200D5B73B /* TabBarController.swift */,
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042FDE5E20A72E6B00490916 /* OtherController.swift in Sources */,
 				0446F3C420A12CC800B9618C /* Saving.swift in Sources */,
 				04A45AA120A672E600438B9C /* AutoClickerViewController.swift in Sources */,
 				045E821620A14A2D00C71914 /* AutoClickerController.swift in Sources */,

@@ -12,23 +12,28 @@ let CookieSave = "CookieSave"
 var CookieAmount = 0.0
 
 let CursorSave = "CursorSave"
-var CursorVariable = 15.0
+let CursorBaseCost = 15.0
+var CursorCost = 15.0
 var CursorAmount = 0
 
 let GrandmaSave = "GrandmaSave"
-var GrandmaVariable = 100.0
+let GrandmaBaseCost = 100.0
+var GrandmaCost = 100.0
 var GrandmaAmount = 0
 
 let FarmSave = "FarmSave"
-var FarmVariable = 1100.0
+let FarmBaseCost = 1100.0
+var FarmCost = 1100.0
 var FarmAmount = 0
 
 let MineSave = "MineSave"
-var MineVariable = 12000.0
+let MineBaseCost = 12000.0
+var MineCost = 12000.0
 var MineAmount = 0
 
 let FactorySave = "FactorySave"
-var FactoryVariable = 130000.0
+let FactoryBaseCost = 130000.0
+var FactoryCost = 130000.0
 var FactoryAmount = 0
 
 let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -37,15 +42,15 @@ func restoreAllData() {
     CookieAmount = restoreDoubleData(FileName: CookieSave)
     
     CursorAmount = restoreIntData(FileName: CursorSave)
-    CursorVariable *= pow(1.15, Double(CursorAmount))
+    CursorCost = CursorBaseCost * pow(1.15, Double(CursorAmount))
     GrandmaAmount = restoreIntData(FileName: GrandmaSave)
-    GrandmaVariable *= pow(1.15, Double(GrandmaAmount))
+    GrandmaCost = GrandmaBaseCost * pow(1.15, Double(GrandmaAmount))
     FarmAmount = restoreIntData(FileName: FarmSave)
-    FarmVariable *= pow(1.15, Double(FarmAmount))
+    FarmCost = FarmBaseCost * pow(1.15, Double(FarmAmount))
     MineAmount = restoreIntData(FileName: MineSave)
-    MineVariable *= pow(1.15, Double(MineAmount))
+    MineCost = MineBaseCost * pow(1.15, Double(MineAmount))
     FactoryAmount = restoreIntData(FileName: FactorySave)
-    FactoryVariable *= pow(1.15, Double(FactoryAmount))
+    FactoryCost = FactoryBaseCost * pow(1.15, Double(FactoryAmount))
 }
 
 func storeAllData() {
@@ -56,6 +61,18 @@ func storeAllData() {
     storeIntData(FileName: FarmSave, Data: FarmAmount)
     storeIntData(FileName: MineSave, Data: MineAmount)
     storeIntData(FileName: FactorySave, Data: FactoryAmount)
+}
+
+func destroyAllData() {
+    destroyData(FileName: CookieSave)
+    
+    destroyData(FileName: CursorSave)
+    destroyData(FileName: GrandmaSave)
+    destroyData(FileName: FarmSave)
+    destroyData(FileName: MineSave)
+    destroyData(FileName: FactorySave)
+    
+    restoreAllData()
 }
 
 func restoreDoubleData(FileName: String) -> Double {
@@ -99,6 +116,18 @@ func storeIntData(FileName: String, Data: Int) -> Int {
     print("FilePath: \(FileURL.path)")
     do {
         try String(Data).write(to: FileURL, atomically: true, encoding: String.Encoding.utf8)
+    } catch let error as NSError {
+        print("Failed writing to URL: \(FileURL), Error: " + error.localizedDescription)
+        return 1
+    }
+    return 0
+}
+
+func destroyData(FileName: String) -> Int {
+    let FileURL = DocumentDirURL.appendingPathComponent(FileName).appendingPathExtension("txt")
+    print("FilePath: \(FileURL.path)")
+    do {
+        try String("0").write(to: FileURL, atomically: true, encoding: String.Encoding.utf8)
     } catch let error as NSError {
         print("Failed writing to URL: \(FileURL), Error: " + error.localizedDescription)
         return 1
