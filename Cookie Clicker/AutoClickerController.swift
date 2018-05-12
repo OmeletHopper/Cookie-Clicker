@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UpgradeViewController: UITableViewController {
+class AutoClickerController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
