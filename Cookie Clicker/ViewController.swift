@@ -70,13 +70,12 @@ class ViewController: UIViewController {
         self.CookiesPerSecondLabel.text = String(format: "%.1f", (CookiesToAdd * 100))
     }
     
-    @objc func HidePlusOne() {
+    @IBAction func HidePlusOne() {
         plusOneLabel.isHidden = true
     }
     
     @IBAction func AddCookie(_ sender: UIButton?) {
         CookieAmount = CookieAmount + 1
         plusOneLabel.isHidden = false
-        _ = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(HidePlusOne), userInfo: nil, repeats: false)
     }
 }

@@ -78,7 +78,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                 <state key="normal" image="cookiex2.png"/>
                                 <connections>
-                                    <action selector="AddCookie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahc-SH-wlA"/>
+                                    <action selector="AddCookie:" destination="BYZ-38-t0r" eventType="touchDown" id="2Jf-qc-0Sn"/>
+                                    <action selector="HidePlusOne" destination="BYZ-38-t0r" eventType="touchUpOutside" id="1Se-tH-REm"/>
+                                    <action selector="HidePlusOne" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLp-4V-zsk"/>
                                 </connections>
                             </button>
                         </subviews>
