@@ -3,7 +3,7 @@
 //  Cookie Clicker
 //
 //  Created by Jonathan Archer on 5/11/18.
-//  Copyright © 2018 Jack Archer Enterprises. All rights reserved.
+//  Copyright © 2018 Jonny Archer. All rights reserved.
 //
 
 import UIKit
