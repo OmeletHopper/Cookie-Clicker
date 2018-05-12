@@ -1,5 +1,5 @@
 //
-//  AutoClickerViewController.swift
+//  UIViewController.swift
 //  Cookie Clicker
 //
 //  Created by Jonathan Archer on 5/11/18.
