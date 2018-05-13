@@ -41,12 +41,38 @@ class AutoClickerController: UITableViewController {
     @IBOutlet weak var FactoryLabel: UILabel!
     @IBOutlet weak var FactoryAmountLabel: UILabel!
     
+    @IBOutlet weak var BankBuyButton: UIButton!
+    @IBOutlet weak var BankCostLabel: UILabel!
+    @IBOutlet weak var BankOwnedLabel: UILabel!
+    
+    @IBOutlet weak var TempleBuyButton: UIButton!
+    @IBOutlet weak var TempleCostLabel: UITableViewCell!
+    @IBOutlet weak var TempleOwnedLabel: UILabel!
+    
+    @IBOutlet weak var WTowerBuyButton: UIButton!
+    @IBOutlet weak var WTowerCostLabel: UILabel!
+    @IBOutlet weak var WTowerOwnedLabel: UILabel!
+    
+    @IBOutlet weak var ShipmentBuyButton: UITableViewCell!
+    @IBOutlet weak var ShipmentCostLabel: UILabel!
+    @IBOutlet weak var ShipmentOwnedLabel: UILabel!
+    
+    @IBOutlet weak var ALabBuyButton: UIButton!
+    @IBOutlet weak var ALabCostLabel: UITableViewCell!
+    @IBOutlet weak var ALabOwnedLabel: UILabel!
+    
     @objc func refreshAll() {
         refreshCursor()
         refreshGrandma()
         refreshFarm()
         refreshMine()
         refreshFactory()
+        
+        refreshBank()
+        refreshTemple()
+        refreshWTower()
+        refreshShipment()
+        refreshALab()
     }
     
     func refreshCursor() {
@@ -72,6 +98,31 @@ class AutoClickerController: UITableViewController {
     func refreshFactory() {
         self.FactoryLabel.text = String(format: "%.0f", FactoryCost)
         self.FactoryAmountLabel.text = "\(FactoryAmount)"
+    }
+    
+    func refreshBank() {
+        self.BankCostLabel.text = String(format: "%.0f", BankCost)
+        self.BankOwnedLabel.text = "\(BankOwned)"
+    }
+    
+    func refreshTemple() {
+        self.TempleCostLabel.text = String(format: "%.0f", TempleCost)
+        self.TempleOwnedLabel.text = "\(TempleOwned)"
+    }
+    
+    func refreshWTower() {
+        self.WTowerCostLabel.text = String(format: "%.0f", WTowerCost)
+        self.WTowerOwnedLabel.text = "\(WTowerOwned)"
+    }
+    
+    func refreshShipment() {
+        self.ShipmentCostLabel.text = String(format: "%.0f", ShipmentCost)
+        self.ShipmentOwnedLabel.text = "\(ShipmentOwned)"
+    }
+    
+    func refreshALab() {
+        self.ALabCostLabel.text = String(format: "%.0f", ALabCost)
+        self.ALabOwnedLabel.text = "\(ALabOwned)"
     }
     
     @IBAction func AddCursor(_ sender: UIButton) {
