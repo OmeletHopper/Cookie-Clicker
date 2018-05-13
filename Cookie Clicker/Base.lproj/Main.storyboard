@@ -1238,7 +1238,7 @@
                     </tableView>
                     <connections>
                         <outlet property="ALabBuyButton" destination="JkP-3b-IWL" id="uT9-Yo-iZ6"/>
-                        <outlet property="ALabCostLabel" destination="zTh-r5-UPW" id="t4f-pE-bTk"/>
+                        <outlet property="ALabCostLabel" destination="PCn-86-zTJ" id="Po4-bq-EeA"/>
                         <outlet property="ALabOwnedLabel" destination="sCy-ZS-EfQ" id="bl1-SX-Szx"/>
                         <outlet property="BankBuyButton" destination="tDl-rk-A7F" id="bBU-ZP-jWV"/>
                         <outlet property="BankCostLabel" destination="LPa-Zu-71h" id="8Bg-Yf-WNb"/>
@@ -1258,11 +1258,11 @@
                         <outlet property="MineAmountLabel" destination="KDy-6e-uJP" id="nxN-I6-4vh"/>
                         <outlet property="MineBuy" destination="D1L-Ra-I7B" id="293-yt-Yeg"/>
                         <outlet property="MineLabel" destination="FIe-Cp-TzS" id="8v3-CW-13F"/>
-                        <outlet property="ShipmentBuyButton" destination="DWe-44-RPP" id="05b-jY-Avo"/>
+                        <outlet property="ShipmentBuyButton" destination="jmZ-tK-Jms" id="rpF-Y3-de6"/>
                         <outlet property="ShipmentCostLabel" destination="Q59-Ov-RxI" id="m2n-yM-kAn"/>
                         <outlet property="ShipmentOwnedLabel" destination="7Wz-a7-kOh" id="L9x-29-xPf"/>
                         <outlet property="TempleBuyButton" destination="mj5-SR-vUw" id="QbX-6L-BzS"/>
-                        <outlet property="TempleCostLabel" destination="KwQ-ca-kU6" id="tcx-cM-ZZp"/>
+                        <outlet property="TempleCostLabel" destination="Svh-PH-kiu" id="jpH-Bk-eUN"/>
                         <outlet property="TempleOwnedLabel" destination="XQx-SC-2Dv" id="9wi-Qx-k8c"/>
                         <outlet property="WTowerBuyButton" destination="czi-wW-awR" id="2Fb-Jh-o8a"/>
                         <outlet property="WTowerCostLabel" destination="UMg-n4-lle" id="8E2-Il-gPO"/>

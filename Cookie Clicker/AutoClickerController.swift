@@ -46,19 +46,19 @@ class AutoClickerController: UITableViewController {
     @IBOutlet weak var BankOwnedLabel: UILabel!
     
     @IBOutlet weak var TempleBuyButton: UIButton!
-    @IBOutlet weak var TempleCostLabel: UITableViewCell!
+    @IBOutlet weak var TempleCostLabel: UILabel!
     @IBOutlet weak var TempleOwnedLabel: UILabel!
     
     @IBOutlet weak var WTowerBuyButton: UIButton!
     @IBOutlet weak var WTowerCostLabel: UILabel!
     @IBOutlet weak var WTowerOwnedLabel: UILabel!
     
-    @IBOutlet weak var ShipmentBuyButton: UITableViewCell!
+    @IBOutlet weak var ShipmentBuyButton: UIButton!
     @IBOutlet weak var ShipmentCostLabel: UILabel!
     @IBOutlet weak var ShipmentOwnedLabel: UILabel!
     
     @IBOutlet weak var ALabBuyButton: UIButton!
-    @IBOutlet weak var ALabCostLabel: UITableViewCell!
+    @IBOutlet weak var ALabCostLabel: UILabel!
     @IBOutlet weak var ALabOwnedLabel: UILabel!
     
     @objc func refreshAll() {
@@ -132,7 +132,7 @@ class AutoClickerController: UITableViewController {
             CookieAmount -= Double(CursorCost)
             
             CursorAmount += 1
-            CursorCost = 15 * pow(1.15, Double(CursorAmount))
+            CursorCost = CursorBaseCost * pow(1.15, Double(CursorAmount))
             refreshCursor()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
@@ -145,7 +145,7 @@ class AutoClickerController: UITableViewController {
             CookieAmount -= Double(GrandmaCost)
             
             GrandmaAmount += 1
-            GrandmaCost = 100 * pow(1.15, Double(GrandmaAmount))
+            GrandmaCost = GrandmaBaseCost * pow(1.15, Double(GrandmaAmount))
             refreshGrandma()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
@@ -158,7 +158,7 @@ class AutoClickerController: UITableViewController {
             CookieAmount -= Double(FarmCost)
             
             FarmAmount += 1
-            FarmCost = 1100 * pow(1.15, Double(FarmAmount))
+            FarmCost = FarmBaseCost * pow(1.15, Double(FarmAmount))
             refreshFarm()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
@@ -171,7 +171,7 @@ class AutoClickerController: UITableViewController {
             CookieAmount -= Double(MineCost)
             
             MineAmount += 1
-            MineCost = 12000 * pow(1.15, Double(MineAmount))
+            MineCost = MineBaseCost * pow(1.15, Double(MineAmount))
             refreshMine()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
@@ -184,7 +184,7 @@ class AutoClickerController: UITableViewController {
             CookieAmount -= Double(FactoryCost)
             
             FactoryAmount +=  1
-            FactoryCost = 130000 * pow(1.15, Double(FactoryAmount))
+            FactoryCost = FactoryBaseCost * pow(1.15, Double(FactoryAmount))
             refreshFactory()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
