@@ -1,7 +1,7 @@
 # Cookie-Clicker
 Cookie Clicker for iOS. Based on
 [Orteil's Cookie Clicker](http://orteil.dashnet.org/cookieclicker/). Note that all the artwork and code is not taken from Orteil.
-![Screenshot here](/Screenshots/screenshot_1.png)
+![Screenshot here](/Screenshots/screenshot_1_resized.png)
 
 ## Contributing
 Just make sure your code makes sense, and send us a PR.
