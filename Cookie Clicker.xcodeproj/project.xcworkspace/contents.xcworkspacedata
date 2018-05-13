@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:../Containers"
+      name = "Containers">
+      <FileRef
+         location = "group:TestContainer.xcappdata">
+      </FileRef>
+   </Group>
    <FileRef
-      location = "self:Cookie Clicker.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
