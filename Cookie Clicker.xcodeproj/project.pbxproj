@@ -15,7 +15,6 @@
 		0486BF8020A74709004EAC78 /* cookie-appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486BF7F20A74709004EAC78 /* cookie-appstore.png */; };
 		0486BF8220A74991004EAC78 /* ipad-pro-icon-x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486BF8120A74991004EAC78 /* ipad-pro-icon-x1.png */; };
 		04A45AA120A672E600438B9C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A45AA020A672E600438B9C /* UIViewController.swift */; };
-		04A45AA320A67B7A00438B9C /* screenshot_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A45AA220A67B7900438B9C /* screenshot_1.png */; };
 		04FEC03A1EFD824F00F8A6AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEC0391EFD824F00F8A6AA /* AppDelegate.swift */; };
 		04FEC03F1EFD824F00F8A6AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC03D1EFD824F00F8A6AA /* Main.storyboard */; };
 		04FEC0411EFD824F00F8A6AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FEC0401EFD824F00F8A6AA /* Assets.xcassets */; };
@@ -213,7 +212,6 @@
 				04FEC06B1F001CDE00F8A6AA /* iphone-icon-x3.png in Resources */,
 				04FEC0691F001CDE00F8A6AA /* ipad-icon-x2.png in Resources */,
 				04FEC06A1F001CDE00F8A6AA /* ipad-icon-x1.png in Resources */,
-				04A45AA320A67B7A00438B9C /* screenshot_1.png in Resources */,
 				04FEC04F1EFD87EC00F8A6AA /* cookiex2.png in Resources */,
 				04FEC0501EFD87EC00F8A6AA /* cookie.png in Resources */,
 				0486BF8220A74991004EAC78 /* ipad-pro-icon-x1.png in Resources */,
