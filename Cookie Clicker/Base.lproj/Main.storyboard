@@ -792,6 +792,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDl-rk-A7F">
                                                     <rect key="frame" x="290" y="7" width="77" height="30"/>
                                                     <state key="normal" title="Buy a Bank"/>
+                                                    <connections>
+                                                        <action selector="BuyBank:" destination="StG-ZF-Pff" eventType="touchUpInside" id="bUP-FK-evW"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -898,6 +901,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mj5-SR-vUw">
                                                     <rect key="frame" x="275" y="7" width="92" height="30"/>
                                                     <state key="normal" title="Buy a Temple"/>
+                                                    <connections>
+                                                        <action selector="BuyTemple:" destination="StG-ZF-Pff" eventType="touchUpInside" id="I3s-om-BWD"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1004,6 +1010,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czi-wW-awR">
                                                     <rect key="frame" x="231" y="7" width="136" height="30"/>
                                                     <state key="normal" title="Buy a Wizard Tower"/>
+                                                    <connections>
+                                                        <action selector="BuyWTower:" destination="StG-ZF-Pff" eventType="touchUpInside" id="v4k-qb-5uO"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1110,6 +1119,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmZ-tK-Jms">
                                                     <rect key="frame" x="259" y="7" width="108" height="30"/>
                                                     <state key="normal" title="Buy a Shipment"/>
+                                                    <connections>
+                                                        <action selector="BuyShipment:" destination="StG-ZF-Pff" eventType="touchUpInside" id="U7K-0s-top"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1216,6 +1228,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkP-3b-IWL">
                                                     <rect key="frame" x="236" y="7" width="131" height="30"/>
                                                     <state key="normal" title="Buy a Alchemy Lab"/>
+                                                    <connections>
+                                                        <action selector="BuyALab:" destination="StG-ZF-Pff" eventType="touchUpInside" id="rwM-2U-Ujr"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

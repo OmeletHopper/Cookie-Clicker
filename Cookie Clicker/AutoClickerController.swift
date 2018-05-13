@@ -189,4 +189,69 @@ class AutoClickerController: UITableViewController {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
         }
     }
+    
+    @IBAction func BuyBank(_ sender: UIButton) {
+        
+        if CookieAmount >= Double(BankCost) {
+            
+            CookieAmount -= Double(BankCost)
+            
+            BankOwned +=  1
+            BankCost = BankBaseCost * pow(1.15, Double(BankOwned))
+            refreshBank()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+        }
+    }
+    
+    @IBAction func BuyTemple(_ sender: UIButton) {
+        
+        if CookieAmount >= Double(TempleCost) {
+            
+            CookieAmount -= Double(TempleCost)
+            
+            TempleOwned +=  1
+            TempleCost = TempleBaseCost * pow(1.15, Double(TempleOwned))
+            refreshTemple()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+        }
+    }
+    
+    @IBAction func BuyWTower(_ sender: UIButton) {
+        
+        if CookieAmount >= Double(WTowerCost) {
+            
+            CookieAmount -= Double(WTowerCost)
+            
+            WTowerOwned +=  1
+            WTowerCost = WTowerBaseCost * pow(1.15, Double(WTowerOwned))
+            refreshWTower()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+        }
+    }
+    
+    @IBAction func BuyShipment(_ sender: UIButton) {
+        
+        if CookieAmount >= Double(ShipmentCost) {
+            
+            CookieAmount -= Double(ShipmentCost)
+            
+            ShipmentOwned +=  1
+            ShipmentCost = ShipmentBaseCost * pow(1.15, Double(ShipmentOwned))
+            refreshShipment()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+        }
+    }
+    
+    @IBAction func BuyALab(_ sender: UIButton) {
+        
+        if CookieAmount >= Double(ALabCost) {
+            
+            CookieAmount -= Double(ALabCost)
+            
+            ALabOwned +=  1
+            ALabCost = ALabBaseCost * pow(1.15, Double(ALabOwned))
+            refreshALab()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+        }
+    }
 }
