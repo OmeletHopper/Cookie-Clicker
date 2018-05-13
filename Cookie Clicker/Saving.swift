@@ -36,6 +36,31 @@ let FactoryBaseCost = 130000.0
 var FactoryCost = 130000.0
 var FactoryAmount = 0
 
+let BankSave = "BankSave"
+let BankBaseCost = 1400000.0
+var BankCost = 1400000.0
+var BankOwned = 0
+
+let TempleSave = "TempleSave"
+let TempleBaseCost = 20000000.0
+var TempleCost = 20000000.0
+var TempleOwned = 0
+
+let WTowerSave = "WTowerSave"
+let WTowerBaseCost = 330000000.0
+var WTowerCost = 330000000.0
+var WTowerOwned = 0
+
+let ShipmentSave = "ShipmentSave"
+let ShipmentBaseCost = 5100000000.0
+var ShipmentCost = 5100000000.0
+var ShipmentOwned = 0
+
+let ALabSave = "ALabSave"
+let ALabBaseCost = 75000000000.0
+var ALabCost = 75000000000.0
+var ALabOwned = 0
+
 let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
 
 func restoreAllData() {
@@ -51,6 +76,17 @@ func restoreAllData() {
     MineCost = MineBaseCost * pow(1.15, Double(MineAmount))
     FactoryAmount = restoreIntData(FileName: FactorySave)
     FactoryCost = FactoryBaseCost * pow(1.15, Double(FactoryAmount))
+    
+    BankOwned = restoreIntData(FileName: BankSave)
+    BankCost = BankBaseCost * pow(1.15, Double(BankOwned))
+    TempleOwned = restoreIntData(FileName: TempleSave)
+    TempleCost = TempleBaseCost * pow(1.15, Double(TempleOwned))
+    WTowerOwned = restoreIntData(FileName: WTowerSave)
+    WTowerCost = WTowerBaseCost * pow(1.15, Double(WTowerOwned))
+    ShipmentOwned = restoreIntData(FileName: ShipmentSave)
+    ShipmentCost = ShipmentBaseCost * pow(1.15, Double(ShipmentOwned))
+    ALabOwned = restoreIntData(FileName: ALabSave)
+    ALabCost = ALabBaseCost * pow(1.15, Double(ALabOwned))
 }
 
 func storeAllData() {
@@ -61,6 +97,12 @@ func storeAllData() {
     storeIntData(FileName: FarmSave, Data: FarmAmount)
     storeIntData(FileName: MineSave, Data: MineAmount)
     storeIntData(FileName: FactorySave, Data: FactoryAmount)
+    
+    storeIntData(FileName: BankSave, Data: BankOwned)
+    storeIntData(FileName: TempleSave, Data: TempleOwned)
+    storeIntData(FileName: WTowerSave, Data: WTowerOwned)
+    storeIntData(FileName: ShipmentSave, Data: ShipmentOwned)
+    storeIntData(FileName: ALabSave, Data: ALabOwned)
 }
 
 func destroyAllData() {
@@ -71,6 +113,12 @@ func destroyAllData() {
     destroyData(FileName: FarmSave)
     destroyData(FileName: MineSave)
     destroyData(FileName: FactorySave)
+    
+    destroyData(FileName: BankSave)
+    destroyData(FileName: TempleSave)
+    destroyData(FileName: WTowerSave)
+    destroyData(FileName: ShipmentSave)
+    destroyData(FileName: ALabSave)
     
     restoreAllData()
 }
