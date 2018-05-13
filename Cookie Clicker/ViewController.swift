@@ -18,9 +18,15 @@ var CookiesToAdd = 0.0;
 func autoClicks() {
     CookiesToAdd = Double(CursorAmount) * 0.001     // Cursors add .1/S.
     CookiesToAdd += Double(GrandmaAmount) * 0.01    // Grandmas add 1/S.
-    CookiesToAdd += Double(FarmAmount) * 0.08       // Grandmas add 1/S.
-    CookiesToAdd += Double(MineAmount) * 0.47       // Mines add 3/S.
-    CookiesToAdd += Double(FactoryAmount) * 2.60    // Factories add 5/S.
+    CookiesToAdd += Double(FarmAmount) * 0.08       // Farms add 8/S.
+    CookiesToAdd += Double(MineAmount) * 0.47       // Mines add 47/S.
+    CookiesToAdd += Double(FactoryAmount) * 2.60    // Factories add 260/S.
+    CookiesToAdd += Double(BankOwned) * 14.0        // Banks add 1,400/S.
+    CookiesToAdd += Double(TempleOwned) * 78.0      // Temples add 7,800/S.
+    CookiesToAdd += Double(WTowerOwned) * 440.0     // Wizard Towers add 44,000/S.
+    CookiesToAdd += Double(ShipmentOwned) * 2600.0  // Shipments add 260,000/S.
+    CookiesToAdd += Double(ALabOwned) * 16000.0     // Alchemy Labs add 1.6 Million/S.
+
     CookieAmount += CookiesToAdd
     
     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateCookieLabel"), object: nil)
