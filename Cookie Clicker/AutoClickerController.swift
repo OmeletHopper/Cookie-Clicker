@@ -134,7 +134,7 @@ class AutoClickerController: UITableViewController {
             CursorAmount += 1
             CursorCost = CursorBaseCost * pow(1.15, Double(CursorAmount))
             refreshCursor()
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+            storeAllData()
         }
     }
     
@@ -147,7 +147,7 @@ class AutoClickerController: UITableViewController {
             GrandmaAmount += 1
             GrandmaCost = GrandmaBaseCost * pow(1.15, Double(GrandmaAmount))
             refreshGrandma()
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+            storeAllData()
         }
     }
     
@@ -160,7 +160,7 @@ class AutoClickerController: UITableViewController {
             FarmAmount += 1
             FarmCost = FarmBaseCost * pow(1.15, Double(FarmAmount))
             refreshFarm()
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+            storeAllData()
         }
     }
     
@@ -173,7 +173,7 @@ class AutoClickerController: UITableViewController {
             MineAmount += 1
             MineCost = MineBaseCost * pow(1.15, Double(MineAmount))
             refreshMine()
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+            storeAllData()
         }
     }
     
@@ -186,7 +186,7 @@ class AutoClickerController: UITableViewController {
             FactoryAmount +=  1
             FactoryCost = FactoryBaseCost * pow(1.15, Double(FactoryAmount))
             refreshFactory()
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+            storeAllData()
         }
     }
     
@@ -199,7 +199,7 @@ class AutoClickerController: UITableViewController {
             BankOwned +=  1
             BankCost = BankBaseCost * pow(1.15, Double(BankOwned))
             refreshBank()
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+            storeAllData()
         }
     }
     
@@ -212,7 +212,7 @@ class AutoClickerController: UITableViewController {
             TempleOwned +=  1
             TempleCost = TempleBaseCost * pow(1.15, Double(TempleOwned))
             refreshTemple()
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+            storeAllData()
         }
     }
     
@@ -225,7 +225,7 @@ class AutoClickerController: UITableViewController {
             WTowerOwned +=  1
             WTowerCost = WTowerBaseCost * pow(1.15, Double(WTowerOwned))
             refreshWTower()
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+            storeAllData()
         }
     }
     
@@ -238,7 +238,7 @@ class AutoClickerController: UITableViewController {
             ShipmentOwned +=  1
             ShipmentCost = ShipmentBaseCost * pow(1.15, Double(ShipmentOwned))
             refreshShipment()
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+            storeAllData()
         }
     }
     
@@ -251,7 +251,7 @@ class AutoClickerController: UITableViewController {
             ALabOwned +=  1
             ALabCost = ALabBaseCost * pow(1.15, Double(ALabOwned))
             refreshALab()
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callForAlert"), object: nil)
+            storeAllData()
         }
     }
 }
