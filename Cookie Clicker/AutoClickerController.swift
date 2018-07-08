@@ -77,8 +77,10 @@ class AutoClickerController: UITableViewController {
     }
 	
 	func refreshLabels(Label: UILabel!, AmountLabel: UILabel!, Data: AutoClickerData) {
-		Label.text = String(format: "%.0f", Data.Cost)
-		AmountLabel.text = "\(Data.Owned)"
+		let numberFormatter = NumberFormatter()
+		numberFormatter.numberStyle = NumberFormatter.Style.decimal
+		Label.text = numberFormatter.string(from: NSNumber(value: Data.Cost))
+		AmountLabel.text = numberFormatter.string(from: NSNumber(value: Data.Owned))
 	}
     
     @IBAction func AddCursor(_ sender: UIButton) {

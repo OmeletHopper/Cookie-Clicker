@@ -12,8 +12,8 @@ import QuartzCore
 var CookiesToAdd = 0.0;
 
 /*
- This function gets called by our scheduledTimer() every .01 of a second.
- This means that everything gets divided by 100.
+	This function gets called by our scheduledTimer() every .01 of a second.
+	This means that everything gets divided by 100.
 */
 func autoClicks() {
     CookiesToAdd = Double(CursorData.Owned) * 0.001     // Cursors add .1/S.
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @objc func auto() { autoClicks() }
+	@objc func auto() { autoClicks() }
         
     func assignBackground(){
         plusOneLabel.isHidden = true
@@ -69,8 +69,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var plusOneLabel: UILabel!
     
     @objc func updateCookie(_ sender: UIButton?) {
-        self.CookieLabel.text = String(format: "%.1f", CookieAmount)
-        self.CookiesPerSecondLabel.text = String(format: "%.1f", (CookiesToAdd * 100))
+		let numberFormatter = NumberFormatter()
+		numberFormatter.numberStyle = NumberFormatter.Style.decimal
+        self.CookieLabel.text = numberFormatter.string(from: NSNumber(value: CookieAmount))
+        self.CookiesPerSecondLabel.text = numberFormatter.string(from: NSNumber(value: (CookiesToAdd * 100)))
     }
     
     @IBAction func HidePlusOne() {
