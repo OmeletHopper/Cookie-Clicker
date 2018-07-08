@@ -62,196 +62,82 @@ class AutoClickerController: UITableViewController {
     @IBOutlet weak var ALabOwnedLabel: UILabel!
     
     @objc func refreshAll() {
-        refreshCursor()
-        refreshGrandma()
-        refreshFarm()
-        refreshMine()
-        refreshFactory()
-        
-        refreshBank()
-        refreshTemple()
-        refreshWTower()
-        refreshShipment()
-        refreshALab()
+		print("refreshAll() called!")
+		refreshLabels(Label: CursorLabel, AmountLabel: CursorAmountLabel, Data: CursorData)
+		refreshLabels(Label: GrandmaLabel, AmountLabel: GrandmaAmountLabel, Data: GrandmaData)
+		refreshLabels(Label: FarmLabel, AmountLabel: FarmAmountLabel, Data: FarmData)
+		refreshLabels(Label: MineLabel, AmountLabel: MineAmountLabel, Data: MineData)
+		refreshLabels(Label: FactoryLabel, AmountLabel: FactoryAmountLabel, Data: FactoryData)
+
+		refreshLabels(Label: BankCostLabel, AmountLabel: BankOwnedLabel, Data: BankData)
+		refreshLabels(Label: TempleCostLabel, AmountLabel: TempleOwnedLabel, Data: TempleData)
+		refreshLabels(Label: WTowerCostLabel, AmountLabel: WTowerOwnedLabel, Data: WTowerData)
+		refreshLabels(Label: ShipmentCostLabel, AmountLabel: ShipmentOwnedLabel, Data: ShipmentData)
+		refreshLabels(Label: ALabCostLabel, AmountLabel: ALabOwnedLabel, Data: ALabData)
     }
-    
-    func refreshCursor() {
-        self.CursorLabel.text = String(format: "%.0f", CursorCost)
-        self.CursorAmountLabel.text = "\(CursorAmount)"
-    }
-    
-    func refreshGrandma() {
-        self.GrandmaLabel.text = String(format: "%.0f", GrandmaCost)
-        self.GrandmaAmountLabel.text = "\(GrandmaAmount)"
-    }
-    
-    func refreshFarm() {
-        self.FarmLabel.text = String(format: "%.0f", FarmCost)
-        self.FarmAmountLabel.text = "\(FarmAmount)"
-    }
-    
-    func refreshMine() {
-        self.MineLabel.text = String(format: "%.0f", MineCost)
-        self.MineAmountLabel.text = "\(MineAmount)"
-    }
-    
-    func refreshFactory() {
-        self.FactoryLabel.text = String(format: "%.0f", FactoryCost)
-        self.FactoryAmountLabel.text = "\(FactoryAmount)"
-    }
-    
-    func refreshBank() {
-        self.BankCostLabel.text = String(format: "%.0f", BankCost)
-        self.BankOwnedLabel.text = "\(BankOwned)"
-    }
-    
-    func refreshTemple() {
-        self.TempleCostLabel.text = String(format: "%.0f", TempleCost)
-        self.TempleOwnedLabel.text = "\(TempleOwned)"
-    }
-    
-    func refreshWTower() {
-        self.WTowerCostLabel.text = String(format: "%.0f", WTowerCost)
-        self.WTowerOwnedLabel.text = "\(WTowerOwned)"
-    }
-    
-    func refreshShipment() {
-        self.ShipmentCostLabel.text = String(format: "%.0f", ShipmentCost)
-        self.ShipmentOwnedLabel.text = "\(ShipmentOwned)"
-    }
-    
-    func refreshALab() {
-        self.ALabCostLabel.text = String(format: "%.0f", ALabCost)
-        self.ALabOwnedLabel.text = "\(ALabOwned)"
-    }
+	
+	func refreshLabels(Label: UILabel!, AmountLabel: UILabel!, Data: AutoClickerData) {
+		Label.text = String(format: "%.0f", Data.Cost)
+		AmountLabel.text = "\(Data.Owned)"
+	}
     
     @IBAction func AddCursor(_ sender: UIButton) {
-        
-        if CookieAmount >= Double(CursorCost) {
-            
-            CookieAmount -= Double(CursorCost)
-            
-            CursorAmount += 1
-            CursorCost = CursorBaseCost * pow(1.15, Double(CursorAmount))
-            refreshCursor()
-            storeAllData()
-        }
+        CursorData.Add()
+		refreshLabels(Label: CursorLabel, AmountLabel: CursorAmountLabel, Data: CursorData)
+		CursorData.save()
     }
     
     @IBAction func AddGrandma(_ sender: UIButton) {
-        
-        if CookieAmount >= Double(GrandmaCost) {
-            
-            CookieAmount -= Double(GrandmaCost)
-            
-            GrandmaAmount += 1
-            GrandmaCost = GrandmaBaseCost * pow(1.15, Double(GrandmaAmount))
-            refreshGrandma()
-            storeAllData()
-        }
+		GrandmaData.Add()
+		refreshLabels(Label: GrandmaLabel, AmountLabel: GrandmaAmountLabel, Data: GrandmaData)
+		GrandmaData.save()
     }
     
     @IBAction func AddFarm(_ sender: UIButton) {
-        
-        if CookieAmount >= Double(FarmCost) {
-            
-            CookieAmount -= Double(FarmCost)
-            
-            FarmAmount += 1
-            FarmCost = FarmBaseCost * pow(1.15, Double(FarmAmount))
-            refreshFarm()
-            storeAllData()
-        }
+		FarmData.Add()
+		refreshLabels(Label: FarmLabel, AmountLabel: FarmAmountLabel, Data: FarmData)
+		FarmData.save()
     }
     
     @IBAction func AddMine(_ sender: UIButton) {
-        
-        if CookieAmount >= Double(MineCost) {
-            
-            CookieAmount -= Double(MineCost)
-            
-            MineAmount += 1
-            MineCost = MineBaseCost * pow(1.15, Double(MineAmount))
-            refreshMine()
-            storeAllData()
-        }
+		MineData.Add()
+		refreshLabels(Label: MineLabel, AmountLabel: MineAmountLabel, Data: MineData)
+		MineData.save()
     }
     
     @IBAction func AddFactory(_ sender: UIButton) {
-        
-        if CookieAmount >= Double(FactoryCost) {
-            
-            CookieAmount -= Double(FactoryCost)
-            
-            FactoryAmount +=  1
-            FactoryCost = FactoryBaseCost * pow(1.15, Double(FactoryAmount))
-            refreshFactory()
-            storeAllData()
-        }
+		FactoryData.Add()
+		refreshLabels(Label: FactoryLabel, AmountLabel: FactoryAmountLabel, Data: FactoryData)
+		FactoryData.save()
     }
     
     @IBAction func BuyBank(_ sender: UIButton) {
-        
-        if CookieAmount >= Double(BankCost) {
-            
-            CookieAmount -= Double(BankCost)
-            
-            BankOwned +=  1
-            BankCost = BankBaseCost * pow(1.15, Double(BankOwned))
-            refreshBank()
-            storeAllData()
-        }
+		BankData.Add()
+		refreshLabels(Label: BankCostLabel, AmountLabel: BankOwnedLabel, Data: BankData)
+		BankData.save()
     }
     
     @IBAction func BuyTemple(_ sender: UIButton) {
-        
-        if CookieAmount >= Double(TempleCost) {
-            
-            CookieAmount -= Double(TempleCost)
-            
-            TempleOwned +=  1
-            TempleCost = TempleBaseCost * pow(1.15, Double(TempleOwned))
-            refreshTemple()
-            storeAllData()
-        }
+		TempleData.Add()
+		refreshLabels(Label: TempleCostLabel, AmountLabel: TempleOwnedLabel, Data: TempleData)
+		TempleData.save()
     }
     
     @IBAction func BuyWTower(_ sender: UIButton) {
-        
-        if CookieAmount >= Double(WTowerCost) {
-            
-            CookieAmount -= Double(WTowerCost)
-            
-            WTowerOwned +=  1
-            WTowerCost = WTowerBaseCost * pow(1.15, Double(WTowerOwned))
-            refreshWTower()
-            storeAllData()
-        }
+		WTowerData.Add()
+		refreshLabels(Label: WTowerCostLabel, AmountLabel: WTowerOwnedLabel, Data: WTowerData)
+		WTowerData.save()
     }
     
     @IBAction func BuyShipment(_ sender: UIButton) {
-        
-        if CookieAmount >= Double(ShipmentCost) {
-            
-            CookieAmount -= Double(ShipmentCost)
-            
-            ShipmentOwned +=  1
-            ShipmentCost = ShipmentBaseCost * pow(1.15, Double(ShipmentOwned))
-            refreshShipment()
-            storeAllData()
-        }
+		ShipmentData.Add()
+		refreshLabels(Label: ShipmentCostLabel, AmountLabel: ShipmentOwnedLabel, Data: ShipmentData)
+		ShipmentData.save()
     }
     
     @IBAction func BuyALab(_ sender: UIButton) {
-        
-        if CookieAmount >= Double(ALabCost) {
-            
-            CookieAmount -= Double(ALabCost)
-            
-            ALabOwned +=  1
-            ALabCost = ALabBaseCost * pow(1.15, Double(ALabOwned))
-            refreshALab()
-            storeAllData()
-        }
-    }
+		ALabData.Add()
+		refreshLabels(Label: ALabCostLabel, AmountLabel: ALabOwnedLabel, Data: ALabData)
+		ALabData.save()
+	}
 }

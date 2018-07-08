@@ -11,114 +11,92 @@ import Foundation
 let CookieSave = "CookieSave"
 var CookieAmount = 0.0
 
-let CursorSave = "CursorSave"
-let CursorBaseCost = 15.0
-var CursorCost = 15.0
-var CursorAmount = 0
+struct AutoClickerData {
+    let SaveName: String
+    let BaseCost: Double
+    var Owned: Int
+    var Cost: Double
 
-let GrandmaSave = "GrandmaSave"
-let GrandmaBaseCost = 100.0
-var GrandmaCost = 100.0
-var GrandmaAmount = 0
+    init(Name: String, BaseCost: Double) {
+        self.SaveName = Name
+        self.BaseCost = BaseCost
+		self.Owned = restoreIntData(FileName: SaveName)
+		self.Cost = self.BaseCost * pow(1.15, Double(Owned))
+    }
+	mutating func load() {
+		self.Owned = restoreIntData(FileName: SaveName)
+		self.Cost = self.BaseCost * pow(1.15, Double(Owned))
+	}
+	mutating func save() {
+		storeIntData(FileName: self.SaveName, Data: self.Owned)
+	}
+	mutating func Add() {
+		if CookieAmount >= Double(self.Cost) {
+			
+			CookieAmount -= Double(self.Cost)
+			
+			self.Owned += 1
+			self.Cost = self.BaseCost * pow(1.15, Double(self.Owned))
+		}
+	}
+}
 
-let FarmSave = "FarmSave"
-let FarmBaseCost = 1100.0
-var FarmCost = 1100.0
-var FarmAmount = 0
-
-let MineSave = "MineSave"
-let MineBaseCost = 12000.0
-var MineCost = 12000.0
-var MineAmount = 0
-
-let FactorySave = "FactorySave"
-let FactoryBaseCost = 130000.0
-var FactoryCost = 130000.0
-var FactoryAmount = 0
-
-let BankSave = "BankSave"
-let BankBaseCost = 1400000.0
-var BankCost = 1400000.0
-var BankOwned = 0
-
-let TempleSave = "TempleSave"
-let TempleBaseCost = 20000000.0
-var TempleCost = 20000000.0
-var TempleOwned = 0
-
-let WTowerSave = "WTowerSave"
-let WTowerBaseCost = 330000000.0
-var WTowerCost = 330000000.0
-var WTowerOwned = 0
-
-let ShipmentSave = "ShipmentSave"
-let ShipmentBaseCost = 5100000000.0
-var ShipmentCost = 5100000000.0
-var ShipmentOwned = 0
-
-let ALabSave = "ALabSave"
-let ALabBaseCost = 75000000000.0
-var ALabCost = 75000000000.0
-var ALabOwned = 0
+var CursorData		= AutoClickerData(Name: "Cursor", BaseCost: 15)
+var GrandmaData		= AutoClickerData(Name: "Grandma", BaseCost: 100)
+var FarmData		= AutoClickerData(Name: "Farm", BaseCost: 1100)
+var MineData		= AutoClickerData(Name: "Mine", BaseCost: 12000)
+var FactoryData		= AutoClickerData(Name: "Factory", BaseCost: 130000)
+var BankData		= AutoClickerData(Name: "Bank", BaseCost: 1400000)
+var TempleData		= AutoClickerData(Name: "Temple", BaseCost: 20000000)
+var WTowerData		= AutoClickerData(Name: "WTower", BaseCost: 330000000)
+var ShipmentData	= AutoClickerData(Name: "Shipment", BaseCost: 5100000000)
+var ALabData		= AutoClickerData(Name: "ALab", BaseCost: 75000000000)
 
 let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
 
 func restoreAllData() {
     CookieAmount = restoreDoubleData(FileName: CookieSave)
     
-    CursorAmount = restoreIntData(FileName: CursorSave)
-    CursorCost = CursorBaseCost * pow(1.15, Double(CursorAmount))
-    GrandmaAmount = restoreIntData(FileName: GrandmaSave)
-    GrandmaCost = GrandmaBaseCost * pow(1.15, Double(GrandmaAmount))
-    FarmAmount = restoreIntData(FileName: FarmSave)
-    FarmCost = FarmBaseCost * pow(1.15, Double(FarmAmount))
-    MineAmount = restoreIntData(FileName: MineSave)
-    MineCost = MineBaseCost * pow(1.15, Double(MineAmount))
-    FactoryAmount = restoreIntData(FileName: FactorySave)
-    FactoryCost = FactoryBaseCost * pow(1.15, Double(FactoryAmount))
-    
-    BankOwned = restoreIntData(FileName: BankSave)
-    BankCost = BankBaseCost * pow(1.15, Double(BankOwned))
-    TempleOwned = restoreIntData(FileName: TempleSave)
-    TempleCost = TempleBaseCost * pow(1.15, Double(TempleOwned))
-    WTowerOwned = restoreIntData(FileName: WTowerSave)
-    WTowerCost = WTowerBaseCost * pow(1.15, Double(WTowerOwned))
-    ShipmentOwned = restoreIntData(FileName: ShipmentSave)
-    ShipmentCost = ShipmentBaseCost * pow(1.15, Double(ShipmentOwned))
-    ALabOwned = restoreIntData(FileName: ALabSave)
-    ALabCost = ALabBaseCost * pow(1.15, Double(ALabOwned))
+    CursorData.load()
+    GrandmaData.load()
+    FarmData.load()
+    MineData.load()
+    FactoryData.load()
+    BankData.load()
+    TempleData.load()
+    WTowerData.load()
+    ShipmentData.load()
+    ALabData.load()
 }
 
 func storeAllData() {
     storeDoubleData(FileName: CookieSave, Data: CookieAmount)
     
-    storeIntData(FileName: CursorSave, Data: CursorAmount)
-    storeIntData(FileName: GrandmaSave, Data: GrandmaAmount)
-    storeIntData(FileName: FarmSave, Data: FarmAmount)
-    storeIntData(FileName: MineSave, Data: MineAmount)
-    storeIntData(FileName: FactorySave, Data: FactoryAmount)
-    
-    storeIntData(FileName: BankSave, Data: BankOwned)
-    storeIntData(FileName: TempleSave, Data: TempleOwned)
-    storeIntData(FileName: WTowerSave, Data: WTowerOwned)
-    storeIntData(FileName: ShipmentSave, Data: ShipmentOwned)
-    storeIntData(FileName: ALabSave, Data: ALabOwned)
+    CursorData.save()
+	GrandmaData.save()
+	FarmData.save()
+	MineData.save()
+	FactoryData.save()
+	BankData.save()
+	TempleData.save()
+	WTowerData.save()
+	ShipmentData.save()
+	ALabData.save()
 }
 
 func destroyAllData() {
     destroyData(FileName: CookieSave)
     
-    destroyData(FileName: CursorSave)
-    destroyData(FileName: GrandmaSave)
-    destroyData(FileName: FarmSave)
-    destroyData(FileName: MineSave)
-    destroyData(FileName: FactorySave)
-    
-    destroyData(FileName: BankSave)
-    destroyData(FileName: TempleSave)
-    destroyData(FileName: WTowerSave)
-    destroyData(FileName: ShipmentSave)
-    destroyData(FileName: ALabSave)
+    destroyData(FileName: CursorData.SaveName)
+    destroyData(FileName: GrandmaData.SaveName)
+    destroyData(FileName: FarmData.SaveName)
+    destroyData(FileName: FarmData.SaveName)
+    destroyData(FileName: FactoryData.SaveName)
+    destroyData(FileName: BankData.SaveName)
+    destroyData(FileName: TempleData.SaveName)
+    destroyData(FileName: WTowerData.SaveName)
+    destroyData(FileName: ShipmentData.SaveName)
+    destroyData(FileName: ALabData.SaveName)
     
     restoreAllData()
 }
