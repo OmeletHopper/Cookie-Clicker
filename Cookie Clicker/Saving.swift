@@ -125,38 +125,38 @@ func restoreIntData(FileName: String) -> Int {
     }
 }
 
-func storeDoubleData(FileName: String, Data: Double) -> Int {
+func storeDoubleData(FileName: String, Data: Double) {
     let FileURL = DocumentDirURL.appendingPathComponent(FileName).appendingPathExtension("txt")
     print("FilePath: \(FileURL.path)")
     do {
         try String(Data).write(to: FileURL, atomically: true, encoding: String.Encoding.utf8)
     } catch let error as NSError {
         print("Failed writing to URL: \(FileURL), Error: " + error.localizedDescription)
-        return 1
+        return
     }
-    return 0
+    return
 }
 
-func storeIntData(FileName: String, Data: Int) -> Int {
+func storeIntData(FileName: String, Data: Int) {
     let FileURL = DocumentDirURL.appendingPathComponent(FileName).appendingPathExtension("txt")
     print("FilePath: \(FileURL.path)")
     do {
         try String(Data).write(to: FileURL, atomically: true, encoding: String.Encoding.utf8)
     } catch let error as NSError {
         print("Failed writing to URL: \(FileURL), Error: " + error.localizedDescription)
-        return 1
+        return
     }
-    return 0
+    return
 }
 
-func destroyData(FileName: String) -> Int {
+func destroyData(FileName: String) {
     let FileURL = DocumentDirURL.appendingPathComponent(FileName).appendingPathExtension("txt")
     print("FilePath: \(FileURL.path)")
     do {
         try String("0").write(to: FileURL, atomically: true, encoding: String.Encoding.utf8)
     } catch let error as NSError {
         print("Failed writing to URL: \(FileURL), Error: " + error.localizedDescription)
-        return 1
+        return
     }
-    return 0
+    return
 }
