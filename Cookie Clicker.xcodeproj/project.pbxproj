@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04079D7D20A2658F007CED2B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04079D7C20A2658F007CED2B /* QuartzCore.framework */; };
 		042FDE5E20A72E6B00490916 /* OtherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042FDE5D20A72E6B00490916 /* OtherController.swift */; };
 		0446F3C420A12CC800B9618C /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0446F3C320A12CC800B9618C /* Saving.swift */; };
 		045E821620A14A2D00C71914 /* AutoClickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E821520A14A2D00C71914 /* AutoClickerController.swift */; };
@@ -63,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04079D7D20A2658F007CED2B /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +107,7 @@
 				04FEC05A1EFF6F6F00F8A6AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		04FEC0371EFD824F00F8A6AA /* Products */ = {
 			isa = PBXGroup;
@@ -380,7 +379,7 @@
 				DEVELOPMENT_TEAM = MJPKG7BL3C;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JonnyArcher.Cookie-Clicker";
@@ -400,7 +399,7 @@
 				DEVELOPMENT_TEAM = MJPKG7BL3C;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JonnyArcher.Cookie-Clicker";
