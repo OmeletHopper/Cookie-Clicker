@@ -90,7 +90,7 @@ func destroyAllData() {
     destroyData(FileName: CursorData.SaveName)
     destroyData(FileName: GrandmaData.SaveName)
     destroyData(FileName: FarmData.SaveName)
-    destroyData(FileName: FarmData.SaveName)
+    destroyData(FileName: MineData.SaveName)
     destroyData(FileName: FactoryData.SaveName)
     destroyData(FileName: BankData.SaveName)
     destroyData(FileName: TempleData.SaveName)
