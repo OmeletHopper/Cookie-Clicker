@@ -27,6 +27,8 @@ class CellsUIViewController: UIViewController {
     @objc func updateCookie(_ sender: UIButton?) {
 		let numberFormatter = NumberFormatter()
 		numberFormatter.numberStyle = NumberFormatter.Style.decimal
+		numberFormatter.minimumFractionDigits = 0
+		numberFormatter.maximumFractionDigits = 1
 		self.cookieLabel.text = numberFormatter.string(from: NSNumber(value: CookieAmount))
         self.CPSLabel.text = numberFormatter.string(from: NSNumber(value: CookiesToAdd * 100))
     }

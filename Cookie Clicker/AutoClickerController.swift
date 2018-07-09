@@ -79,6 +79,8 @@ class AutoClickerController: UITableViewController {
 	func refreshLabels(Label: UILabel!, AmountLabel: UILabel!, Data: AutoClickerData) {
 		let numberFormatter = NumberFormatter()
 		numberFormatter.numberStyle = NumberFormatter.Style.decimal
+		numberFormatter.minimumFractionDigits = 0
+		numberFormatter.maximumFractionDigits = 1
 		Label.text = numberFormatter.string(from: NSNumber(value: Data.Cost))
 		AmountLabel.text = numberFormatter.string(from: NSNumber(value: Data.Owned))
 	}
